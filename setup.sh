@@ -298,7 +298,8 @@ rm /root/sshinstaller.sh >/dev/null 2>&1
 rm /root/xrayinstaller.sh >/dev/null 2>&1
 rm /root/websocketinstaller.sh >/dev/null 2>&1
 rm /root/toolsinstaller.sh >/dev/null 2>&1
-echo -e ""
+echo -e " INSTALL SISTEM UPD" | lolcat
+wget -q https://raw.githubusercontent.com/mywtg/wtgtnl1/main/udp.sh && chmod +x udp.sh && ./udp.sh
 echo -ne "[ ${yell}WARNING${NC} ] reboot now ? (y/n)? "
 read answer
 if [ "$answer" == "${answer#[Yy]}" ] ;then
