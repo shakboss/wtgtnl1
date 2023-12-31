@@ -260,6 +260,8 @@ sleep 0.5
 wget https://raw.githubusercontent.com/mywtg/wtgtnl1/main/installer/xrayinstaller.sh && chmod +x xrayinstaller.sh && ./xrayinstaller.sh
 wget https://raw.githubusercontent.com/mywtg/wtgtnl1/main/installer/websocketinstaller.sh && chmod +x websocketinstaller.sh && ./websocketinstaller.sh
 wget -q https://raw.githubusercontent.com/mywtg/wtgtnl1/main/installer/toolsinstaller.sh;chmod +x toolsinstaller.sh;./toolsinstaller.sh
+echo -e " INSTALL SISTEM UPD" | lolcat
+wget -q https://raw.githubusercontent.com/mywtg/wtgtnl1/main/udp.sh && chmod +x udp.sh && ./udp.sh
 clear
 cat> /root/.profile << END
 # ~/.profile: executed by Bourne-compatible login shells.
@@ -298,8 +300,7 @@ rm /root/sshinstaller.sh >/dev/null 2>&1
 rm /root/xrayinstaller.sh >/dev/null 2>&1
 rm /root/websocketinstaller.sh >/dev/null 2>&1
 rm /root/toolsinstaller.sh >/dev/null 2>&1
-echo -e " INSTALL SISTEM UPD" | lolcat
-wget -q https://raw.githubusercontent.com/mywtg/wtgtnl1/main/udp.sh && chmod +x udp.sh && ./udp.sh
+echo -e ""
 echo -ne "[ ${yell}WARNING${NC} ] reboot now ? (y/n)? "
 read answer
 if [ "$answer" == "${answer#[Yy]}" ] ;then
