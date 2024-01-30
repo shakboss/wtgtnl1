@@ -198,7 +198,7 @@ echo -e "${RED}╒࿐࿐࿐࿐࿐࿐࿐࿐࿐࿐࿐࿐࿐࿐࿐࿐࿐࿐࿐࿐�
 echo -e " \e[36mClient Name     \e[0m: $Name"
 echo -e " \e[36mExpired         \e[0m: $Exp2 | $certificate Day Left"
 echo -e " \e[36mVersion         \e[0m: Websocket 1.0"
-echo -e " \e[36mDeplover     \e[0m: ERPINGME"
+echo -e " \e[36mDeplover        \e[0m: ERPINGME"
 echo -e "${BLUE}╘࿐࿐࿐࿐࿐࿐࿐࿐࿐࿐࿐࿐࿐࿐࿐࿐࿐࿐࿐࿐࿐࿐࿐࿐࿐࿐࿐࿐࿐࿐࿐࿐࿐࿐࿐࿐࿐࿐࿐࿐࿐࿐࿐࿐╛\033[0m"
 echo -e   ""
 read -p " Select menu :  "  opt
