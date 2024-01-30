@@ -154,7 +154,7 @@ read -p "$( echo -e "${GREEN}Please Input ! ${NC}(${YELLOW}1/2${NC})${NC} " )" c
 if [[ $choose_domain == "2" ]]; then # // Using Automatic Domain
 # // String / Request Data
 sub=$(</dev/urandom tr -dc a-z0-9 | head -c4)
-DOMAIN=vpncantik.tech
+DOMAIN=gmestore.biz.id
 SUB_DOMAIN=${sub}.gmestore.biz.id
 CF_ID=gmedomain@gmail.com
 CF_KEY=68fa07556331d6ffd0aaebd8bfd76240d7148
