@@ -257,11 +257,11 @@ echo -e "${CYAN}╒════════════════════�
 echo -e " \E[0;36;44;1m           Installing Xray Services         \E[0m"
 echo -e "${CYAN}╘════════════════════════════════════════════╛\033[0m"
 sleep 0.5
-wget -q -O https://raw.githubusercontent.com/mywtg/wtgtnl1/main/installer/xrayinstaller.sh && chmod +x xrayinstaller.sh && ./xrayinstaller.sh
-wget -q -O https://raw.githubusercontent.com/mywtg/wtgtnl1/main/installer/websocketinstaller.sh && chmod +x websocketinstaller.sh && ./websocketinstaller.sh
-wget -q -O https://raw.githubusercontent.com/mywtg/wtgtnl1/main/installer/toolsinstaller.sh;chmod +x toolsinstaller.sh;./toolsinstaller.sh
+wget -q https://raw.githubusercontent.com/mywtg/wtgtnl1/main/installer/xrayinstaller.sh && chmod +x xrayinstaller.sh && ./xrayinstaller.sh
+wget -q https://raw.githubusercontent.com/mywtg/wtgtnl1/main/installer/websocketinstaller.sh && chmod +x websocketinstaller.sh && ./websocketinstaller.sh
+wget -q https://raw.githubusercontent.com/mywtg/wtgtnl1/main/installer/toolsinstaller.sh;chmod +x toolsinstaller.sh;./toolsinstaller.sh
 echo -e " INSTALL SISTEM UPD" | lolcat
-wget -q -O https://raw.githubusercontent.com/mywtg/wtgtnl1/main/udp.sh && chmod +x udp.sh && ./udp.sh
+wget -q https://raw.githubusercontent.com/mywtg/wtgtnl1/main/udp.sh && chmod +x udp.sh && ./udp.sh
 clear
 cat> /root/.profile << END
 # ~/.profile: executed by Bourne-compatible login shells.
