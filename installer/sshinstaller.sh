@@ -304,6 +304,12 @@ echo -e "[ ${green}INFO${NC} ] Downloading Menu "
           wget -q -O killer "https://raw.githubusercontent.com/mywtg/wtgtnl1/main/file/killer.sh"
           wget -q -O m-telkomsel "https://raw.githubusercontent.com/mywtg/wtgtnl1/main/file/m-telkomsel.sh"
           wget -q -O m-bug "https://raw.githubusercontent.com/mywtg/wtgtnl1/main/file/m-bug.sh"
+	  wget -q -O m-bug "https://raw.githubusercontent.com/mywtg/wtgtnl1/main/file/m-indosat.sh"
+          wget -q -O m-bug "https://raw.githubusercontent.com/mywtg/wtgtnl1/main/file/m-xl.sh"
+          wget -q -O m-bug "https://raw.githubusercontent.com/mywtg/wtgtnl1/main/file/m-axis.sh"
+
+   
+   
 
 chmod +x menu
 chmod +x m-vmess
@@ -338,6 +344,9 @@ chmod +x killer
 
 chmod +x m-telkomsel
 chmod +x m-bug
+chmod +x m-indosat
+chmod +x m-xl
+chmod +x m-axis
 
 #Setting CronJob
 cd
