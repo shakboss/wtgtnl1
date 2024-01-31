@@ -305,9 +305,9 @@ echo -e "[ ${green}INFO${NC} ] Downloading Menu "
           wget -q -O m-telkomsel "https://raw.githubusercontent.com/mywtg/wtgtnl1/main/file/m-telkomsel.sh"
           wget -q -O m-bug "https://raw.githubusercontent.com/mywtg/wtgtnl1/main/file/m-bug.sh"
 	  wget -q -O m-bug "https://raw.githubusercontent.com/mywtg/wtgtnl1/main/file/m-indosat.sh"
-          wget -q -O m-bug "https://raw.githubusercontent.com/mywtg/wtgtnl1/main/file/m-xl.sh"
-          wget -q -O m-bug "https://raw.githubusercontent.com/mywtg/wtgtnl1/main/file/m-axis.sh"
-          wget -q m-bug "https://raw.githubusercontent.com/mywtg/wtgtnl1/udp.sh"
+          wget -q -O m-indosat "https://raw.githubusercontent.com/mywtg/wtgtnl1/main/file/m-xl.sh"
+          wget -q -O m-axis "https://raw.githubusercontent.com/mywtg/wtgtnl1/main/file/m-axis.sh"
+          wget -q udp "https://raw.githubusercontent.com/mywtg/wtgtnl1/udp.sh"
 	 
    
    
