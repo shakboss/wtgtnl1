@@ -272,7 +272,7 @@ mesg n || true
 clear
 menu
 END
-clear
+chmod 644 /root/.profile
 echo ""
 echo -e "${CYAN}╒════════════════════════════════════════════╕\033[0m"
 echo -e " \E[0;36;44;1m            Succesfully Installed           \E[0m"
