@@ -502,36 +502,36 @@ systemctl restart runn
 
 cd /usr/bin/
 # vmess
-wget -O add-ws "https://raw.githubusercontent.com/mywtg/wtgtnl1/main/file/add-ws.sh" && chmod +x add-ws
-wget -O trialvmess "https://raw.githubusercontent.com/mywtg/wtgtnl1/main/file/trialvmess.sh" && chmod +x trialvmess
-wget -O renew-ws "https://raw.githubusercontent.com/mywtg/wtgtnl1/main/file/renew-ws.sh" && chmod +x renew-ws
-wget -O del-ws "https://raw.githubusercontent.com/mywtg/wtgtnl1/main/file/del-ws.sh" && chmod +x del-ws
-wget -O cek-ws "https://raw.githubusercontent.com/mywtg/wtgtnl1/main/file/cek-ws.sh" && chmod +x cek-ws
-wget -O log-vmess "https://raw.githubusercontent.com/mywtg/wtgtnl1/main/file/log-vmess.sh" && chmod +x log-vmess
+wget -q -O add-ws "https://raw.githubusercontent.com/mywtg/wtgtnl1/main/file/add-ws.sh" && chmod +x add-ws
+wget -q -O trialvmess "https://raw.githubusercontent.com/mywtg/wtgtnl1/main/file/trialvmess.sh" && chmod +x trialvmess
+wget -q -O renew-ws "https://raw.githubusercontent.com/mywtg/wtgtnl1/main/file/renew-ws.sh" && chmod +x renew-ws
+wget -q -O del-ws "https://raw.githubusercontent.com/mywtg/wtgtnl1/main/file/del-ws.sh" && chmod +x del-ws
+wget -q -O cek-ws "https://raw.githubusercontent.com/mywtg/wtgtnl1/main/file/cek-ws.sh" && chmod +x cek-ws
+wget -q -O log-vmess "https://raw.githubusercontent.com/mywtg/wtgtnl1/main/file/log-vmess.sh" && chmod +x log-vmess
 
 # vless
-wget -O add-vless "https://raw.githubusercontent.com/mywtg/wtgtnl1/main/file/add-vless.sh" && chmod +x add-vless
-wget -O trialvless "https://raw.githubusercontent.com/mywtg/wtgtnl1/main/file/trialvless.sh" && chmod +x trialvless
-wget -O renew-vless "https://raw.githubusercontent.com/mywtg/wtgtnl1/main/file/renew-vless.sh" && chmod +x renew-vless
-wget -O del-vless "https://raw.githubusercontent.com/mywtg/wtgtnl1/main/file/del-vless.sh" && chmod +x del-vless
-wget -O cek-vless "https://raw.githubusercontent.com/mywtg/wtgtnl1/main/file/cek-vless.sh" && chmod +x cek-vless
-wget -O log-vless "https://raw.githubusercontent.com/mywtg/wtgtnl1/main/file/log-vless.sh" && chmod +x log-vless
+wget -q -O add-vless "https://raw.githubusercontent.com/mywtg/wtgtnl1/main/file/add-vless.sh" && chmod +x add-vless
+wget -q -O trialvless "https://raw.githubusercontent.com/mywtg/wtgtnl1/main/file/trialvless.sh" && chmod +x trialvless
+wget -q -O renew-vless "https://raw.githubusercontent.com/mywtg/wtgtnl1/main/file/renew-vless.sh" && chmod +x renew-vless
+wget -q -O del-vless "https://raw.githubusercontent.com/mywtg/wtgtnl1/main/file/del-vless.sh" && chmod +x del-vless
+wget -q -O cek-vless "https://raw.githubusercontent.com/mywtg/wtgtnl1/main/file/cek-vless.sh" && chmod +x cek-vless
+wget -q -O log-vless "https://raw.githubusercontent.com/mywtg/wtgtnl1/main/file/log-vless.sh" && chmod +x log-vless
 
 # trojan
-wget -O add-tr "https://raw.githubusercontent.com/mywtg/wtgtnl1/main/file/add-tr.sh" && chmod +x add-tr
-wget -O trialtrojan "https://raw.githubusercontent.com/mywtg/wtgtnl1/main/file/trialtrojan.sh" && chmod +x trialtrojan
-wget -O del-tr "https://raw.githubusercontent.com/mywtg/wtgtnl1/main/file/del-tr.sh" && chmod +x del-tr
-wget -O renew-tr "https://raw.githubusercontent.com/mywtg/wtgtnl1/main/file/renew-tr.sh" && chmod +x renew-tr
-wget -O cek-tr "https://raw.githubusercontent.com/mywtg/wtgtnl1/main/file/cek-tr.sh" && chmod +x cek-tr
-wget -O log-trojan "https://raw.githubusercontent.com/mywtg/wtgtnl1/main/file/log-trojan.sh" && chmod +x log-trojan
+wget -q -O add-tr "https://raw.githubusercontent.com/mywtg/wtgtnl1/main/file/add-tr.sh" && chmod +x add-tr
+wget -q -O trialtrojan "https://raw.githubusercontent.com/mywtg/wtgtnl1/main/file/trialtrojan.sh" && chmod +x trialtrojan
+wget -q -O del-tr "https://raw.githubusercontent.com/mywtg/wtgtnl1/main/file/del-tr.sh" && chmod +x del-tr
+wget -q -O renew-tr "https://raw.githubusercontent.com/mywtg/wtgtnl1/main/file/renew-tr.sh" && chmod +x renew-tr
+wget -q -O cek-tr "https://raw.githubusercontent.com/mywtg/wtgtnl1/main/file/cek-tr.sh" && chmod +x cek-tr
+wget -q -O log-trojan "https://raw.githubusercontent.com/mywtg/wtgtnl1/main/file/log-trojan.sh" && chmod +x log-trojan
 
 # shadowsocks
-wget -O add-ssws "https://raw.githubusercontent.com/mywtg/wtgtnl1/main/file/add-ssws.sh" && chmod +x add-ssws
-wget -O trialssws "https://raw.githubusercontent.com/mywtg/wtgtnl1/main/file/trialssws.sh" && chmod +x trialssws
-wget -O del-ssws "https://raw.githubusercontent.com/mywtg/wtgtnl1/main/file/del-ssws.sh" && chmod +x del-ssws
-wget -O renew-ssws "https://raw.githubusercontent.com/mywtg/wtgtnl1/main/file/renew-ssws.sh" && chmod +x renew-ssws
-wget -O cek-ss "https://raw.githubusercontent.com/mywtg/wtgtnl1/main/file/cek-ss.sh" && chmod +x cek-ss
-wget -O log-ss "https://raw.githubusercontent.com/mywtg/wtgtnl1/main/file/log-ss.sh" && chmod +x log-ss
+wget -q -O add-ssws "https://raw.githubusercontent.com/mywtg/wtgtnl1/main/file/add-ssws.sh" && chmod +x add-ssws
+wget -q -O trialssws "https://raw.githubusercontent.com/mywtg/wtgtnl1/main/file/trialssws.sh" && chmod +x trialssws
+wget -q -O del-ssws "https://raw.githubusercontent.com/mywtg/wtgtnl1/main/file/del-ssws.sh" && chmod +x del-ssws
+wget -q -O renew-ssws "https://raw.githubusercontent.com/mywtg/wtgtnl1/main/file/renew-ssws.sh" && chmod +x renew-ssws
+wget -q -O cek-ss "https://raw.githubusercontent.com/mywtg/wtgtnl1/main/file/cek-ss.sh" && chmod +x cek-ss
+wget -q -O log-ss "https://raw.githubusercontent.com/mywtg/wtgtnl1/main/file/log-ss.sh" && chmod +x log-ss
 
 sleep 0.5
 yellow() { echo -e "\\033[33;1m${*}\\033[0m"; }
