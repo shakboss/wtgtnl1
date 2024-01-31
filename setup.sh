@@ -274,7 +274,6 @@ mesg n || true
 clear
 menu
 END
-chmod 644 /root/.profile
 clear
 echo ""
 echo -e "${CYAN}╒════════════════════════════════════════════╕\033[0m"
