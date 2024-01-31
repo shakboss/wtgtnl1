@@ -273,6 +273,7 @@ clear
 menu
 END
 chmod 644 /root/.profile
+clear
 echo ""
 echo -e "${CYAN}╒════════════════════════════════════════════╕\033[0m"
 echo -e " \E[0;36;44;1m            Succesfully Installed           \E[0m"
