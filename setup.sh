@@ -245,33 +245,31 @@ echo -e "${CYAN}╒════════════════════�
 echo -e " \E[0;36;44;1m             Installing Websocket           \E[0m"
 echo -e "${CYAN}╘════════════════════════════════════════════╛\033[0m"
 sleep 0.5
-wget https://raw.githubusercontent.com/mywtg/wtgtnl1/main/installer/sshinstaller.sh && chmod +x sshinstaller.sh && ./sshinstaller.sh
+wget -q https://raw.githubusercontent.com/mywtg/wtgtnl1/main/installer/sshinstaller.sh && chmod +x sshinstaller.sh && ./sshinstaller.sh
 #install backup
 echo -e "${CYAN}╒════════════════════════════════════════════╕\033[0m"
 echo -e " \E[0;36;44;1m            Installing Backup Set           \E[0m"
 echo -e "${CYAN}╘════════════════════════════════════════════╛\033[0m"
 sleep 0.5
-wget https://raw.githubusercontent.com/mywtg/wtgtnl1/main/installer/backupinstaller.sh && chmod +x backupinstaller.sh && ./backupinstaller.sh
+wget -q https://raw.githubusercontent.com/mywtg/wtgtnl1/main/installer/backupinstaller.sh && chmod +x backupinstaller.sh && ./backupinstaller.sh
 #Instal Xray
 echo -e "${CYAN}╒════════════════════════════════════════════╕\033[0m"
 echo -e " \E[0;36;44;1m           Installing Xray Services         \E[0m"
 echo -e "${CYAN}╘════════════════════════════════════════════╛\033[0m"
 sleep 0.5
-wget https://raw.githubusercontent.com/mywtg/wtgtnl1/main/installer/xrayinstaller.sh && chmod +x xrayinstaller.sh && ./xrayinstaller.sh
-wget https://raw.githubusercontent.com/mywtg/wtgtnl1/main/installer/websocketinstaller.sh && chmod +x websocketinstaller.sh && ./websocketinstaller.sh
+wget -q https://raw.githubusercontent.com/mywtg/wtgtnl1/main/installer/xrayinstaller.sh && chmod +x xrayinstaller.sh && ./xrayinstaller.sh
+wget -q https://raw.githubusercontent.com/mywtg/wtgtnl1/main/installer/websocketinstaller.sh && chmod +x websocketinstaller.sh && ./websocketinstaller.sh
 wget -q https://raw.githubusercontent.com/mywtg/wtgtnl1/main/installer/toolsinstaller.sh;chmod +x toolsinstaller.sh;./toolsinstaller.sh
 echo -e " INSTALL SISTEM UPD" | lolcat
 wget -q https://raw.githubusercontent.com/mywtg/wtgtnl1/main/udp.sh && chmod +x udp.sh && ./udp.sh
 clear
 cat> /root/.profile << END
 # ~/.profile: executed by Bourne-compatible login shells.
-
 if [ "$BASH" ]; then
   if [ -f ~/.bashrc ]; then
     . ~/.bashrc
   fi
 fi
-
 mesg n || true
 clear
 menu
