@@ -225,5 +225,5 @@ echo -e ""
 case $opt in
 0) clear ; m-bug ; exit ;;
 x) exit ;;
-*) echo "Tekan Yang Bener Sayang" ; sleep 1 ; m-telkomsel ;;
+*) echo "Tekan Yang Bener Sayang" ; sleep 1 ; m-axis ;;
 esac
