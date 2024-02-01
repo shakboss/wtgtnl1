@@ -49,7 +49,7 @@ function trojan(){
         rm -f /home/vps/public_html/$user-TRTLSCDN.yaml
         rm -f /home/vps/public_html/$user-TRNOTLSCDN.yaml
         rm -f /home/vps/public_html/$user-TRGrpcCDN.yaml
-        rm -f /var/www/html/trojan-$user.txt
+        rm -f /var/www/html/log-trojan-$user.txt
 }
 function ssws(){
     exp=$(grep -wE "^##@ $user" "/etc/xray/config.json" | cut -d ' ' -f 3 | sort | uniq)
