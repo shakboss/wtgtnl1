@@ -129,7 +129,7 @@ echo -e "${RED} ⪼⪻⪼⪻⪼⪻⪼⪻⪼⪻⪼⪻⪼⪻⪼⪻⪼⪻⪼⪻⪼�
 echo -e "Link gRPC      : ${trojanlink1}" | tee -a /etc/xraylog/log-trojan-$user.txt
 echo -e "${CYAN} ⪼⪻⪼⪻⪼⪻⪼⪻⪼⪻⪼⪻⪼⪻⪼⪻⪼⪻⪼⪻⪼⪻⪼⪻⪼⪻⪼⪻⪼⪻⪼⪻⪼⪻⪼⪻⪼⪻⪼⪻⪼⪻⪼⪻\033[0m" | tee -a /etc/xraylog/log-trojan-$user.txt
 echo -e "Expired On     : $exp" | tee -a /etc/xraylog/log-trojan-$user.txt
-echo -e "Format OpenClash  : https://${domain}:81/trojan-$user.txt" 
+echo -e "Format OpenClash  : https://${domain}:81/trojan-$user.txt"  tee -a /etc/xraylog/log-trojan-$user.txt
 echo -e "${RED} ⪼⪻⪼⪻⪼⪻⪼⪻⪼⪻⪼⪻⪼⪻⪼⪻⪼⪻⪼⪻⪼⪻⪼⪻⪼⪻⪼⪻⪼⪻⪼⪻⪼⪻⪼⪻⪼⪻⪼⪻⪼⪻⪼⪻\033[0m" | tee -a /etc/xraylog/log-trojan-$user.txt
 echo "" | tee -a /etc/xraylog/log-trojan-$user.txt
 echo "Thanks for using GmeServices"
