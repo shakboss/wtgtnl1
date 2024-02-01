@@ -107,6 +107,7 @@ cat >/var/www/html/log-trojan-$user.txt <<-END
   grpc-opts:
     grpc-service-name: trojan-grpc
 END
+
 curl -s --max-time $TIMES -d "chat_id=$CHATID&disable_web_page_preview=1&text=$TEXT&parse_mode=html" $URL
 echo -e "${ORANGE}╒࿐࿐࿐࿐࿐࿐࿐࿐࿐࿐࿐࿐࿐࿐࿐࿐࿐࿐࿐࿐࿐࿐࿐࿐࿐࿐࿐࿐࿐࿐࿐࿐࿐࿐࿐࿐࿐࿐࿐࿐࿐࿐࿐࿐╕\033[0m" | tee -a /etc/xraylog/log-trojan-$user.txt
 echo -e " \E[0;36;44;1m            Detail Trojan Account           \E[0m" | tee -a /etc/xraylog/log-trojan-$user.txt
@@ -129,7 +130,7 @@ echo -e "${RED} ⪼⪻⪼⪻⪼⪻⪼⪻⪼⪻⪼⪻⪼⪻⪼⪻⪼⪻⪼⪻⪼�
 echo -e "Link gRPC      : ${trojanlink1}" | tee -a /etc/xraylog/log-trojan-$user.txt
 echo -e "${CYAN} ⪼⪻⪼⪻⪼⪻⪼⪻⪼⪻⪼⪻⪼⪻⪼⪻⪼⪻⪼⪻⪼⪻⪼⪻⪼⪻⪼⪻⪼⪻⪼⪻⪼⪻⪼⪻⪼⪻⪼⪻⪼⪻⪼⪻\033[0m" | tee -a /etc/xraylog/log-trojan-$user.txt
 echo -e "Expired On     : $exp" | tee -a /etc/xraylog/log-trojan-$user.txt
-echo -e "Format OpenClash  : https://${domain}:81/trojan-$user.txt"  tee -a /etc/xraylog/log-trojan-$user.txt
+echo -e "Format OpenClash  : https://${domain}:81/trojan-$user.txt" | tee -a /etc/xraylog/log-trojan-$user.txt
 echo -e "${RED} ⪼⪻⪼⪻⪼⪻⪼⪻⪼⪻⪼⪻⪼⪻⪼⪻⪼⪻⪼⪻⪼⪻⪼⪻⪼⪻⪼⪻⪼⪻⪼⪻⪼⪻⪼⪻⪼⪻⪼⪻⪼⪻⪼⪻\033[0m" | tee -a /etc/xraylog/log-trojan-$user.txt
 echo "" | tee -a /etc/xraylog/log-trojan-$user.txt
 echo "Thanks for using GmeServices"
