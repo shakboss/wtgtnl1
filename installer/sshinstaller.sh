@@ -307,7 +307,7 @@ echo -e "[ ${green}INFO${NC} ] Downloading Menu "
 	  wget -q -O m-indosat "https://raw.githubusercontent.com/mywtg/wtgtnl1/main/file/m-indosat.sh"
           wget -q -O m-xl "https://raw.githubusercontent.com/mywtg/wtgtnl1/main/file/m-xl.sh"
           wget -q -O m-axis "https://raw.githubusercontent.com/mywtg/wtgtnl1/main/file/m-axis.sh"
-	  wget -q -O K "https://raw.githubusercontent.com/mywtg/mek/main/K.py"
+	  wget -q -O K "https://raw.githubusercontent.com/mywtg/wtgtnl1/main/file/K.py"
    
    
 
