@@ -119,7 +119,82 @@ vmesslink2="vmess://$(echo $ask | base64 -w 0)"
 vmesslink3="vmess://$(echo $grpc | base64 -w 0)"
 systemctl restart xray > /dev/null 2>&1
 service cron restart > /dev/null 2>&1
-clear
+
+cat >/var/www/html/log-vmess-$user.txt <<-END
+
+◇━━━━━━━━━━━━━━━━━◇
+   Format For Clash
+◇━━━━━━━━━━━━━━━━━◇
+
+# Format Vmess WS TLS
+
+- name: Vmess-$user-WS TLS
+  type: vmess
+  server: ${domain}
+  port: 443
+  uuid: ${uuid}
+  alterId: 0
+  cipher: auto
+  udp: true
+  tls: true
+  skip-cert-verify: true
+  servername: ${domain}
+  network: ws
+  ws-opts:
+    path: /vmess
+    headers:
+      Host: ${domain}
+
+# Format Vmess WS Non TLS
+
+- name: Vmess-$user-WS Non TLS
+  type: vmess
+  server: ${domain}
+  port: 80
+  uuid: ${uuid}
+  alterId: 0
+  cipher: auto
+  udp: true
+  tls: false
+  skip-cert-verify: false
+  servername: ${domain}
+  network: ws
+  ws-opts:
+    path: /vmess
+    headers:
+      Host: ${domain}
+
+# Format Vmess gRPC
+
+- name: Vmess-$user-gRPC (SNI)
+  server: ${domain}
+  port: 443
+  type: vmess
+  uuid: ${uuid}
+  alterId: 0
+  cipher: auto
+  network: grpc
+  tls: true
+  servername: ${domain}
+  skip-cert-verify: true
+  grpc-opts:
+    grpc-service-name: vmess-grpc
+
+◇━━━━━━━━━━━━━━━━━◇
+ Link Akun Vmess                   
+◇━━━━━━━━━━━━━━━━━◇
+Link TLS         : 
+${vmesslink1}
+◇━━━━━━━━━━━━━━━━━◇
+Link none TLS    : 
+${vmesslink2}
+◇━━━━━━━━━━━━━━━━━◇
+Link GRPC        : 
+${vmesslink3}
+◇━━━━━━━━━━━━━━━━━◇
+
+END
+
 echo -e "${ORANGE}╒࿐࿐࿐࿐࿐࿐࿐࿐࿐࿐࿐࿐࿐࿐࿐࿐࿐࿐࿐࿐࿐࿐࿐࿐࿐࿐࿐࿐࿐࿐࿐࿐࿐࿐࿐࿐࿐࿐࿐࿐࿐࿐࿐࿐╕\033[0m" | tee -a /etc/xraylog/log-vmess-$user.txt
 echo -e " \E[0;36;44;1m            Detail Vmess Account            \E[0m" | tee -a /etc/xraylog/log-vmess-$user.txt
 echo -e "${CYAN}╘࿐࿐࿐࿐࿐࿐࿐࿐࿐࿐࿐࿐࿐࿐࿐࿐࿐࿐࿐࿐࿐࿐࿐࿐࿐࿐࿐࿐࿐࿐࿐࿐࿐࿐࿐࿐࿐࿐࿐࿐࿐࿐࿐࿐╛\033[0m" | tee -a /etc/xraylog/log-vmess-$user.txt
@@ -144,6 +219,7 @@ echo -e "${CYAN} ⪼⪻⪼⪻⪼⪻⪼⪻⪼⪻⪼⪻⪼⪻⪼⪻⪼⪻⪼⪻⪼
 echo -e "Link gRPC      : ${vmesslink3}" | tee -a /etc/xraylog/log-vmess-$user.txt
 echo -e "${ORANGE} ⪼⪻⪼⪻⪼⪻⪼⪻⪼⪻⪼⪻⪼⪻⪼⪻⪼⪻⪼⪻⪼⪻⪼⪻⪼⪻⪼⪻⪼⪻⪼⪻⪼⪻⪼⪻⪼⪻⪼⪻⪼⪻⪼⪻\033[0m" | tee -a /etc/xraylog/log-vmess-$user.txt
 echo -e "Expired On     : $exp" | tee -a /etc/xraylog/log-vmess-$user.txt
+echo -e "Format OpenClash : https://${domain}:81/vmess-$user.txt" | tee -a /etc/xraylog/log-vmess-$user.txt
 echo -e "${CYAN} ⪼⪻⪼⪻⪼⪻⪼⪻⪼⪻⪼⪻⪼⪻⪼⪻⪼⪻⪼⪻⪼⪻⪼⪻⪼⪻⪼⪻⪼⪻⪼⪻⪼⪻⪼⪻⪼⪻⪼⪻⪼⪻⪼⪻\033[0m" | tee -a /etc/xraylog/log-vmess-$user.txt
 echo "" | tee -a /etc/xraylog/log-vmess-$user.txt
 echo "Thanks for using GmeServices"
