@@ -72,7 +72,7 @@ trojanlink2="trojan://${uuid}@isi_bug_disini:80?path=%2Ftrojan-ws&security=none&
 systemctl restart xray
 clear
 
-cat >/var/www/html/trojan-$user.txt <<-END
+cat >/var/www/html/log-trojan-$user.txt <<-END
 ◇━━━━━━━━━━━━━━━━━◇
    Format For Clash
 ◇━━━━━━━━━━━━━━━━━◇
