@@ -219,8 +219,8 @@ case $opt in
 77) clear ; reboot ;;
 66) clear ; menu-tcp ;;
 88) clear ; gotop ;;
-99) clear ; K ;;
-100) clear ; m-scan ;;
+99) clear ; m-bug ;;
+100) clear ; K ;;
 x) exit ;;
 *) echo "Tekan Yang Bener Sayang " ; sleep 1 ; menu ;;
 esac
