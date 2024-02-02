@@ -221,7 +221,7 @@ echo -e " 104.18.214.59 "
 echo -e " 104.18.225.52 "
 echo -e " 104.21.25.10 "
 echo -e " 172.67.221.139 "
-echo -e " \E[0;36;44;1mHOST\E[0m
+echo -e " \E[0;36;44;1mHOST\E[0m "
 echo -e " api.visionplus.id "
 echo -e " media.ovo.id "
 echo -e " visionplus.id "
