@@ -119,91 +119,10 @@ vmesslink2="vmess://$(echo $ask | base64 -w 0)"
 vmesslink3="vmess://$(echo $grpc | base64 -w 0)"
 systemctl restart xray > /dev/null 2>&1
 service cron restart > /dev/null 2>&1
-
-
-
-cat >/var/www/html/vmess-$user.txt <<-END
-
-◇━━━━━━━━━━━━━━━━━◇
-   Format For Clash
-◇━━━━━━━━━━━━━━━━━◇
-
-# Format Vmess WS TLS
-
-- name: Vmess-$user-WS TLS
-  type: vmess
-  server: ${domain}
-  port: 443
-  uuid: ${uuid}
-  alterId: 0
-  cipher: auto
-  udp: true
-  tls: true
-  skip-cert-verify: true
-  servername: ${domain}
-  network: ws
-  ws-opts:
-    path: /vmess
-    headers:
-      Host: ${domain}
-
-# Format Vmess WS Non TLS
-
-- name: Vmess-$user-WS Non TLS
-  type: vmess
-  server: ${domain}
-  port: 80
-  uuid: ${uuid}
-  alterId: 0
-  cipher: auto
-  udp: true
-  tls: false
-  skip-cert-verify: false
-  servername: ${domain}
-  network: ws
-  ws-opts:
-    path: /vmess
-    headers:
-      Host: ${domain}
-
-# Format Vmess gRPC
-
-- name: Vmess-$user-gRPC (SNI)
-  server: ${domain}
-  port: 443
-  type: vmess
-  uuid: ${uuid}
-  alterId: 0
-  cipher: auto
-  network: grpc
-  tls: true
-  servername: ${domain}
-  skip-cert-verify: true
-  grpc-opts:
-    grpc-service-name: vmess-grpc
-
-◇━━━━━━━━━━━━━━━━━◇
- Link Akun Vmess                   
-◇━━━━━━━━━━━━━━━━━◇
-Link TLS         : 
-${vmesslink1}
-◇━━━━━━━━━━━━━━━━━◇
-Link none TLS    : 
-${vmesslink2}
-◇━━━━━━━━━━━━━━━━━◇
-Link GRPC        : 
-${vmesslink3}
-◇━━━━━━━━━━━━━━━━━◇
-
-END
-if [ ! -e /etc/vmess ]; then
-  mkdir -p /etc/vmess
-fi
-
 clear
-echo -e "${ORANGE}╒࿐࿐࿐࿐࿐࿐࿐࿐࿐࿐࿐࿐࿐࿐࿐࿐࿐࿐࿐࿐࿐࿐࿐࿐࿐࿐࿐࿐࿐࿐࿐࿐࿐࿐࿐࿐࿐࿐࿐࿐࿐࿐࿐࿐╕\033[0m" | tee -a /etc/xraylog/log-vmess-$user.txt
+echo -e "${ORANGE}╒࿐࿐࿐࿐࿐࿐࿐࿐࿐࿐࿐࿐╕\033[0m" | tee -a /etc/xraylog/log-vmess-$user.txt
 echo -e " \E[0;36;44;1m            Detail Vmess Account            \E[0m" | tee -a /etc/xraylog/log-vmess-$user.txt
-echo -e "${CYAN}╘࿐࿐࿐࿐࿐࿐࿐࿐࿐࿐࿐࿐࿐࿐࿐࿐࿐࿐࿐࿐࿐࿐࿐࿐࿐࿐࿐࿐࿐࿐࿐࿐࿐࿐࿐࿐࿐࿐࿐࿐࿐࿐࿐࿐╛\033[0m" | tee -a /etc/xraylog/log-vmess-$user.txt
+echo -e "${CYAN}╘࿐࿐࿐࿐࿐࿐࿐࿐࿐࿐࿐࿐╛\033[0m" | tee -a /etc/xraylog/log-vmess-$user.txt
 echo -e "Remarks        : ${user}" | tee -a /etc/xraylog/log-vmess-$user.txt
 echo -e "Domain         : ${domain}" | tee -a /etc/xraylog/log-vmess-$user.txt
 echo -e "ISP            : ${ISP}" | tee -a /etc/xraylog/log-vmess-$user.txt
@@ -217,16 +136,15 @@ echo -e "Security       : auto" | tee -a /etc/xraylog/log-vmess-$user.txt
 echo -e "Network        : ws" | tee -a /etc/xraylog/log-vmess-$user.txt
 echo -e "Path           : /vmess" | tee -a /etc/xraylog/log-vmess-$user.txt
 echo -e "Service Name   : vmess-grpc" | tee -a /etc/xraylog/log-vmess-$user.txt
-echo -e "${RED} ⪼⪻⪼⪻⪼⪻⪼⪻⪼⪻⪼⪻⪼⪻⪼⪻⪼⪻⪼⪻⪼⪻⪼⪻⪼⪻⪼⪻⪼⪻⪼⪻⪼⪻⪼⪻⪼⪻⪼⪻⪼⪻⪼⪻\033[0m" | tee -a /etc/xraylog/log-vmess-$user.txt
+echo -e "${RED} ⪼⪻⪼⪻⪼⪻⪼⪻⪼⪻⪼⪻⪼⪻⪼⪻⪼⪻⪼⪻\033[0m" | tee -a /etc/xraylog/log-vmess-$user.txt
 echo -e "Link TLS       : ${vmesslink1}" | tee -a /etc/xraylog/log-vmess-$user.txt
-echo -e "${CYAN} ⪼⪻⪼⪻⪼⪻⪼⪻⪼⪻⪼⪻⪼⪻⪼⪻⪼⪻⪼⪻⪼⪻⪼⪻⪼⪻⪼⪻⪼⪻⪼⪻⪼⪻⪼⪻⪼⪻⪼⪻⪼⪻⪼⪻\033[0m" | tee -a /etc/xraylog/log-vmess-$user.txt
+echo -e "${CYAN} ⪼⪻⪼⪻⪼⪻⪼⪻⪼⪻⪼⪻⪼⪻⪼⪻⪼⪻⪼⪻\033[0m" | tee -a /etc/xraylog/log-vmess-$user.txt
 echo -e "Link none TLS  : ${vmesslink2}" | tee -a /etc/xraylog/log-vmess-$user.txt
-echo -e "${CYAN} ⪼⪻⪼⪻⪼⪻⪼⪻⪼⪻⪼⪻⪼⪻⪼⪻⪼⪻⪼⪻⪼⪻⪼⪻⪼⪻⪼⪻⪼⪻⪼⪻⪼⪻⪼⪻⪼⪻⪼⪻⪼⪻⪼⪻\033[0m" | tee -a /etc/xraylog/log-vmess-$user.txt
+echo -e "${CYAN} ⪼⪻⪼⪻⪼⪻⪼⪻⪼⪻⪼⪻⪼⪻⪼⪻⪼⪻⪼⪻\033[0m" | tee -a /etc/xraylog/log-vmess-$user.txt
 echo -e "Link gRPC      : ${vmesslink3}" | tee -a /etc/xraylog/log-vmess-$user.txt
-echo -e "${ORANGE} ⪼⪻⪼⪻⪼⪻⪼⪻⪼⪻⪼⪻⪼⪻⪼⪻⪼⪻⪼⪻⪼⪻⪼⪻⪼⪻⪼⪻⪼⪻⪼⪻⪼⪻⪼⪻⪼⪻⪼⪻⪼⪻⪼⪻\033[0m" | tee -a /etc/xraylog/log-vmess-$user.txt
+echo -e "${ORANGE} ⪼⪻⪼⪻⪼⪻⪼⪻⪼⪻⪼⪻⪼⪻⪼⪻⪼⪻⪼⪻\033[0m" | tee -a /etc/xraylog/log-vmess-$user.txt
 echo -e "Expired On     : $exp" | tee -a /etc/xraylog/log-vmess-$user.txt
-echo -e "Format OpenClash : https://${domain}:81/vmess-$user.txt" | tee -a /etc/xraylog/log-vmess-$user.txt
-echo -e "${CYAN} ⪼⪻⪼⪻⪼⪻⪼⪻⪼⪻⪼⪻⪼⪻⪼⪻⪼⪻⪼⪻⪼⪻⪼⪻⪼⪻⪼⪻⪼⪻⪼⪻⪼⪻⪼⪻⪼⪻⪼⪻⪼⪻⪼⪻\033[0m" | tee -a /etc/xraylog/log-vmess-$user.txt
+echo -e "${CYAN} ⪼⪻⪼⪻⪼⪻⪼⪻⪼⪻⪼⪻⪼⪻⪼⪻⪼⪻⪼⪻\033[0m" | tee -a /etc/xraylog/log-vmess-$user.txt
 echo "" | tee -a /etc/xraylog/log-vmess-$user.txt
 echo "Thanks for using GmeServices"
 read -n 1 -s -r -p "Press any key to back"
