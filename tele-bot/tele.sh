@@ -36,7 +36,7 @@ LIGHT='\033[0;37m'
 apt update && apt upgrade
 apt install python3 python3-pip git
 cd /usr/bin
-wget https://raw.githubusercontent.com/mywtg/wtgtnl1/main/bot/bot.zip
+wget https://raw.githubusercontent.com/mywtg/wtgtnl1/main/tele-bot/bot.zip
 unzip bot.zip
 mv bot/* /usr/bin
 chmod +x /usr/bin/*
