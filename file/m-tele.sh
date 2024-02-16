@@ -7,6 +7,10 @@ BLUE='\033[0;34m'
 PURPLE='\033[0;35m'
 CYAN='\033[0;36m'
 LIGHT='\033[0;37m'
+
+tele-bot="https://raw.githubusercontent.com/mywtg/wtgtnl1/main/tele-bot/tele.sh"
+red() { echo -e "\\033[32;1m${*}\\033[0m"; }
+# Valid Script
 MYIP=$(wget -qO- ipinfo.io/ip);
 echo "Checking VPS"
 CEKEXPIRED () {
@@ -49,7 +53,7 @@ echo -e ""
 read -p " Select menu :  "  opt
 echo -e ""
 case $opt in
-1) clear ; tele ; exit ;;
+1) clear ; tele ; wget ${tele-bot} && chmod +x tele.sh && ./tele.sh ;;
 2) clear ; trial ; exit ;;
 3) clear ; renew ; exit ;;
 4) clear ; hapus ; exit ;;
