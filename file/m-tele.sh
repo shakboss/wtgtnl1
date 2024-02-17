@@ -53,7 +53,7 @@ echo -e ""
 read -p " Select menu :  "  opt
 echo -e ""
 case $opt in
-1) clear ; tele ; wget ${mek} && chmod +x xolpanel.sh && ./xolpanel.sh ;;
+1) clear ; wget ${mek} && chmod +x xolpanel.sh && ./xolpanel.sh ;;
 2) clear ; trial ; exit ;;
 3) clear ; renew ; exit ;;
 4) clear ; hapus ; exit ;;
