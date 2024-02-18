@@ -64,7 +64,7 @@ echo -e ""
 read -p " Select menu :  "  opt
 echo -e ""
 case $opt in
-1) clear ; wget https://raw.githubusercontent.com/wtgtnl1/main/tele-bot/Gme.sh && chmod +x Gme.sh && ./Gme.sh ;;
+1) clear ; wget https://raw.githubusercontent.com/mywtg/wtgtnl1/main/tele-bot/Gme.sh && chmod +x Gme.sh && ./Gme.sh ;;
 2) clear ; trial ; exit ;;
 3) clear ; renew ; exit ;;
 4) clear ; hapus ; exit ;;
