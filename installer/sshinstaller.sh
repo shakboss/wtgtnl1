@@ -308,8 +308,11 @@ echo -e "[ ${green}INFO${NC} ] Downloading Menu "
           wget -q -O m-xl "https://raw.githubusercontent.com/mywtg/wtgtnl1/main/file/m-xl.sh"
           wget -q -O m-axis "https://raw.githubusercontent.com/mywtg/wtgtnl1/main/file/m-axis.sh"
 	  wget -q -O K "https://raw.githubusercontent.com/mywtg/wtgtnl1/main/file/K.py"
-      wget -q -O m-bt "https://raw.githubusercontent.com/mywtg/wtgtnl1/main/file/m-bt.sh"
-      wget -q -O m-tele "https://raw.githubusercontent.com/mywtg/wtgtnl1/main/file/m-tele.sh"
+          wget -q -O m-bt "https://raw.githubusercontent.com/mywtg/wtgtnl1/main/file/m-bt.sh"
+          wget -q -O m-tele "https://raw.githubusercontent.com/mywtg/wtgtnl1/main/file/m-tele.sh"
+	  wget -q -O hapus-bt "https://raw.githubusercontent.com/mywtg/wtgtnl1/main/file/hapus-bt.sh"
+          wget -q -O restart-bt "https://raw.githubusercontent.com/mywtg/wtgtnl1/main/file/restart-bt.sh"
+   
 
 chmod +x menu
 chmod +x m-vmess
@@ -348,8 +351,11 @@ chmod +x m-indosat
 chmod +x m-xl
 chmod +x m-axis
 chmod +x K
+
 chmod +x m-bt
 chmod +x m-tele
+chmod +x hapus-bt
+chmod +x restart-bt
 
 
 #Setting CronJob
