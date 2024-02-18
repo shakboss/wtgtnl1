@@ -52,7 +52,6 @@ echo -e ""
 echo -e " [\e[36m•1\e[0m] Add Bot Tele "
 echo -e " [\e[36m•2\e[0m] Hapus Bot Tele "
 echo -e " [\e[36m•3\e[0m] Stop Bot Tele "
-echo -e " [\e[36m•4\e[0m] Delete Bot Tele "
 echo -e " [\e[36m•5\e[0m] Restart Bot Tele "
 echo -e ""
 echo -e " [\e[31m•0\e[0m] \e[31mBACK TO MENU\033[0m"
@@ -65,10 +64,9 @@ read -p " Select menu :  "  opt
 echo -e ""
 case $opt in
 1) clear ; wget https://raw.githubusercontent.com/mywtg/wtgtnl1/main/tele-bot/Gme.sh && chmod +x Gme.sh && ./Gme.sh ;;
-2) clear ; trial ; exit ;;
-3) clear ; renew ; exit ;;
-4) clear ; hapus ; exit ;;
-5) clear ; cek ; exit ;;
+2) clear ; hapus-bt ; exit ;;
+3) clear ; stop-bt ; exit ;;
+4) clear ; restart-bt ; exit ;;
 0) clear ; m-bt ; exit ;;
 x) exit ;;
 *) echo "Anda salah tekan " ; sleep 1 ; m-tele ;;
