@@ -51,9 +51,9 @@ clear
 domen=`cat /etc/xray/domain`
 ISP=$(cat /usr/local/etc/xray/org)
 CITY=$(cat /usr/local/etc/xray/city)
-echo -e "${ORANGE}╒࿐࿐࿐࿐࿐࿐࿐࿐࿐࿐࿐࿐࿐࿐࿐࿐࿐࿐࿐࿐࿐࿐࿐࿐࿐࿐࿐࿐࿐࿐࿐࿐࿐࿐࿐࿐࿐࿐࿐࿐࿐࿐࿐࿐╕\033[0m"
+echo -e "${blue}╒࿐࿐࿐࿐࿐࿐࿐࿐࿐࿐࿐࿐࿐࿐࿐࿐࿐࿐࿐࿐࿐࿐࿐࿐࿐࿐࿐࿐࿐࿐࿐࿐࿐࿐࿐࿐࿐࿐࿐࿐࿐࿐࿐࿐╕\033[0m"
 echo -e " \E[0;36;44;1m              Create SSH Account            \E[0m"
-echo -e "${CYAN}╘࿐࿐࿐࿐࿐࿐࿐࿐࿐࿐࿐࿐࿐࿐࿐࿐࿐࿐࿐࿐࿐࿐࿐࿐࿐࿐࿐࿐࿐࿐࿐࿐࿐࿐࿐࿐࿐࿐࿐࿐࿐࿐࿐࿐╛\033[0m"
+echo -e "${RED}╘࿐࿐࿐࿐࿐࿐࿐࿐࿐࿐࿐࿐࿐࿐࿐࿐࿐࿐࿐࿐࿐࿐࿐࿐࿐࿐࿐࿐࿐࿐࿐࿐࿐࿐࿐࿐࿐࿐࿐࿐࿐࿐࿐࿐╛\033[0m"
 read -p "Username : " Login
 read -p "Password : " Pass
 read -p "Expired (hari): " masaaktif
@@ -68,12 +68,12 @@ echo -e "$Pass\n$Pass\n"|passwd $Login &> /dev/null
 PID=`ps -ef |grep -v grep | grep sshws |awk '{print $2}'`
 
 if [[ ! -z "${PID}" ]]; then
-echo -e "${ORANGE}╒࿐࿐࿐࿐࿐࿐࿐࿐࿐࿐࿐࿐࿐࿐࿐࿐࿐࿐࿐࿐࿐࿐࿐࿐࿐࿐࿐࿐࿐࿐࿐࿐࿐࿐࿐࿐࿐࿐࿐࿐࿐࿐࿐࿐╕\033[0m" | tee -a /etc/xraylog/log-ssh-$Login.txt
-echo -e " \E[0;36;44;1m              SSH Account Detail            \E[0m" | tee -a /etc/xraylog/log-ssh-$Login.txt
-echo -e "${CYAN}╘࿐࿐࿐࿐࿐࿐࿐࿐࿐࿐࿐࿐࿐࿐࿐࿐࿐࿐࿐࿐࿐࿐࿐࿐࿐࿐࿐࿐࿐࿐࿐࿐࿐࿐࿐࿐࿐࿐࿐࿐࿐࿐࿐࿐╛\033[0m" | tee -a /etc/xraylog/log-ssh-$Login.txt
+echo -e "${BLUE}╒══════════════════════════╕\033[0m" | tee -a /etc/xraylog/log-ssh-$Login.txt
+echo -e " \E[0;33;44;1m    SSH Account Detail    \E[0m" | tee -a /etc/xraylog/log-ssh-$Login.txt
+echo -e "${RED}╘══════════════════════════╛\033[0m" | tee -a /etc/xraylog/log-ssh-$Login.txt
 echo -e "Username    : $Login" | tee -a /etc/xraylog/log-ssh-$Login.txt
 echo -e "Password    : $Pass" | tee -a /etc/xraylog/log-ssh-$Login.txt
-echo -e "${GREEN} ⪼⪻⪼⪻⪼⪻⪼⪻⪼⪻⪼⪻⪼⪻⪼⪻⪼⪻⪼⪻⪼⪻⪼⪻⪼⪻⪼⪻⪼⪻⪼⪻⪼⪻⪼⪻⪼⪻⪼⪻⪼⪻⪼⪻\033[0m" | tee -a /etc/xraylog/log-ssh-$Login.txt
+echo -e "${BLUE} ════════════════════════\033[0m" | tee -a /etc/xraylog/log-ssh-$Login.txt
 echo -e "IP          : $IP" | tee -a /etc/xraylog/log-ssh-$Login.txt
 echo -e "Host        : $domen" | tee -a /etc/xraylog/log-ssh-$Login.txt
 echo -e "ISP         : $ISP" | tee -a /etc/xraylog/log-ssh-$Login.txt
@@ -83,18 +83,16 @@ echo -e "SSH WS      : 80, 8880, 8080, 2082, 2095" | tee -a /etc/xraylog/log-ssh
 echo -e "SSH SSL WS  : 443, 8443, 2083, 2053, 2096" | tee -a /etc/xraylog/log-ssh-$Login.txt
 echo -e "SSL/TLS     : 222, 777" | tee -a /etc/xraylog/log-ssh-$Login.txt
 echo -e "UDPGW       : 7100-7900" | tee -a /etc/xraylog/log-ssh-$Login.txt
-echo -e "${ORANGE} ⪼⪻⪼⪻⪼⪻⪼⪻⪼⪻⪼⪻⪼⪻⪼⪻⪼⪻⪼⪻⪼⪻⪼⪻⪼⪻⪼⪻⪼⪻⪼⪻⪼⪻⪼⪻⪼⪻⪼⪻⪼⪻⪼⪻\033[0m" | tee -a /etc/xraylog/log-ssh-$Login.txt
+echo -e "${RED} ════════════════════════\033[0m" | tee -a /etc/xraylog/log-ssh-$Login.txt
 echo -e "Expired On     : $exp" | tee -a /etc/xraylog/log-ssh-$Login.txt
-echo -e "${CYAN} ⪼⪻⪼⪻⪼⪻⪼⪻⪼⪻⪼⪻⪼⪻⪼⪻⪼⪻⪼⪻⪼⪻⪼⪻⪼⪻⪼⪻⪼⪻⪼⪻⪼⪻⪼⪻⪼⪻⪼⪻⪼⪻⪼⪻\033[0m" | tee -a /etc/xraylog/log-ssh-$Login.txt
+echo -e "${BLUE} ════════════════════════\033[0m" | tee -a /etc/xraylog/log-ssh-$Login.txt
 else
-echo -e "${ORANGE}╒࿐࿐࿐࿐࿐࿐࿐࿐࿐࿐࿐࿐࿐࿐࿐࿐࿐࿐࿐࿐࿐࿐࿐࿐࿐࿐࿐࿐࿐࿐࿐࿐࿐࿐࿐࿐࿐࿐࿐࿐࿐࿐࿐࿐╕\033[0m" | tee -a /etc/xraylog/log-ssh-$Login.txt
-
-echo -e " \E[0;36;44;1m              SSH Account Detail            \E[0m" | tee -a /etc/xraylog/log-ssh-$Login.txt
-
-echo -e "${CYAN}╘࿐࿐࿐࿐࿐࿐࿐࿐࿐࿐࿐࿐࿐࿐࿐࿐࿐࿐࿐࿐࿐࿐࿐࿐࿐࿐࿐࿐࿐࿐࿐࿐࿐࿐࿐࿐࿐࿐࿐࿐࿐࿐࿐࿐╛\033[0m" | tee -a /etc/xraylog/log-ssh-$Login.txt
+echo -e "${RED}╒══════════════════════════╕\033[0m" | tee -a /etc/xraylog/log-ssh-$Login.txt
+echo -e " \E[0;33;44;1m    SSH Account Detail    \E[0m" | tee -a /etc/xraylog/log-ssh-$Login.txt
+echo -e "${BLUE}╘══════════════════════════╛\033[0m" | tee -a /etc/xraylog/log-ssh-$Login.txt
 echo -e "Username    : $Login" | tee -a /etc/xraylog/log-ssh-$Login.txt
 echo -e "Password    : $Pass" | tee -a /etc/xraylog/log-ssh-$Login.txt
-echo -e "${ORANGE} ⪼⪻⪼⪻⪼⪻⪼⪻⪼⪻⪼⪻⪼⪻⪼⪻⪼⪻⪼⪻⪼⪻⪼⪻⪼⪻⪼⪻⪼⪻⪼⪻⪼⪻⪼⪻⪼⪻⪼⪻⪼⪻⪼⪻\033[0m" | tee -a /etc/xraylog/log-ssh-$Login.txt
+echo -e "${RED} ════════════════════════\033[0m" | tee -a /etc/xraylog/log-ssh-$Login.txt
 echo -e "IP          : $IP" | tee -a /etc/xraylog/log-ssh-$Login.txt
 echo -e "Host        : $domen" | tee -a /etc/xraylog/log-ssh-$Login.txt
 echo -e "ISP         : $ISP" | tee -a /etc/xraylog/log-ssh-$Login.txt
@@ -104,9 +102,9 @@ echo -e "SSH WS      : 80, 8880, 8080, 2082, 2095" | tee -a /etc/xraylog/log-ssh
 echo -e "SSH SSL WS  : 443, 8443, 2083, 2053, 2096" | tee -a /etc/xraylog/log-ssh-$Login.txt
 echo -e "SSL/TLS     : 222, 777" | tee -a /etc/xraylog/log-ssh-$Login.txt
 echo -e "UDPGW       : 7100-7900" | tee -a /etc/xraylog/log-ssh-$Login.txt
-echo -e "${CYAN} ⪼⪻⪼⪻⪼⪻⪼⪻⪼⪻⪼⪻⪼⪻⪼⪻⪼⪻⪼⪻⪼⪻⪼⪻⪼⪻⪼⪻⪼⪻⪼⪻⪼⪻⪼⪻⪼⪻⪼⪻⪼⪻⪼⪻\033[0m" | tee -a /etc/xraylog/log-ssh-$Login.txt
+echo -e "${BLUE} ════════════════════════\033[0m" | tee -a /etc/xraylog/log-ssh-$Login.txt
 echo -e "Expired On     : $exp" | tee -a /etc/xraylog/log-ssh-$Login.txt
-echo -e "${RED} ⪼⪻⪼⪻⪼⪻⪼⪻⪼⪻⪼⪻⪼⪻⪼⪻⪼⪻⪼⪻⪼⪻⪼⪻⪼⪻⪼⪻⪼⪻⪼⪻⪼⪻⪼⪻⪼⪻⪼⪻⪼⪻⪼⪻\033[0m" | tee -a /etc/xraylog/log-ssh-$Login.txt
+echo -e "${RED} ════════════════════════\033[0m" | tee -a /etc/xraylog/log-ssh-$Login.txt
 fi
 echo "" | tee -a /etc/xraylog/log-ssh-$Login.txt
 read -n 1 -s -r -p "Press any key to back"
