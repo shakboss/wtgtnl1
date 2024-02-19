@@ -57,7 +57,7 @@ jum=$(cat /tmp/ipvless.txt)
 if [[ -z "$jum" ]]; then
 echo > /dev/null
 else
-iplimit=$(cat /etc/kyt/limit/vless/ip/${akun})
+iplimit=$(cat /etc/Gme/limit/vless/ip/${akun})
 jum2=$(cat /tmp/ipvless.txt | wc -l)
 byte=$(cat /etc/vless/${akun})
 lim=$(con ${byte})
