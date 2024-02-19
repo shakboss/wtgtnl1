@@ -369,7 +369,6 @@ echo -e "[ ${green}INFO${NC} ] Downloading Menu "
 	  wget -q -O K "https://raw.githubusercontent.com/mywtg/wtgtnl1/main/file/K.py"
       wget -q -O m-bt "https://raw.githubusercontent.com/mywtg/wtgtnl1/main/file/m-bt.sh"
       wget -q -O m-tele "https://raw.githubusercontent.com/mywtg/wtgtnl1/main/file/m-tele.sh"
-      wget -q -O tele "https://raw.githubusercontent.com/mywtg/wtgtnl1/main/tele-bot/tele.sh"
 
 chmod +x menu
 chmod +x m-vmess
@@ -410,7 +409,6 @@ chmod +x m-axis
 chmod +x K
 chmod +x m-bt
 chmod +x m-tele
-chmod +x tele
 
 
 #Setting CronJob
