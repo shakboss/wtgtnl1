@@ -129,9 +129,9 @@ service cron restart > /dev/null 2>&1
 clear
 
 
-echo -e "${ORANGE}╒࿐࿐࿐࿐࿐࿐࿐࿐࿐࿐࿐࿐࿐࿐࿐࿐࿐࿐࿐࿐࿐࿐࿐࿐࿐࿐࿐࿐࿐࿐࿐࿐࿐࿐࿐࿐࿐࿐࿐࿐࿐࿐࿐࿐╕\033[0m" | tee -a /etc/xraylog/log-vmess-$user.txt
-echo -e " \E[0;36;44;1m             Vmess Trial Account            \E[0m" | tee -a /etc/xraylog/log-vmess-$user.txt
-echo -e "${CYAN}╘࿐࿐࿐࿐࿐࿐࿐࿐࿐࿐࿐࿐࿐࿐࿐࿐࿐࿐࿐࿐࿐࿐࿐࿐࿐࿐࿐࿐࿐࿐࿐࿐࿐࿐࿐࿐࿐࿐࿐࿐࿐࿐࿐࿐╛\033[0m" | tee -a /etc/xraylog/log-vmess-$user.txt
+echo -e "${RED}╒══════════════════════════╕\033[0m" | tee -a /etc/xraylog/log-vmess-$user.txt
+echo -e " \E[0;33;44;1m   Detail Vmess Account   \E[0m" | tee -a /etc/xraylog/log-vmess-$user.txt
+echo -e "${BLUE}╘══════════════════════════╛\033[0m" | tee -a /etc/xraylog/log-vmess-$user.txt
 echo -e "Remarks        : ${user}" | tee -a /etc/xraylog/log-vmess-$user.txt
 echo -e "Domain         : ${domain}" | tee -a /etc/xraylog/log-vmess-$user.txt
 echo -e "ISP            : ${ISP}" | tee -a /etc/xraylog/log-vmess-$user.txt
@@ -145,15 +145,15 @@ echo -e "Security       : auto" | tee -a /etc/xraylog/log-vmess-$user.txt
 echo -e "Network        : ws" | tee -a /etc/xraylog/log-vmess-$user.txt
 echo -e "Path           : /vmess" | tee -a /etc/xraylog/log-vmess-$user.txt
 echo -e "Service Name   : vmess-grpc" | tee -a /etc/xraylog/log-vmess-$user.txt
-echo -e "${ORANGE} ⪼⪻⪼⪻⪼⪻⪼⪻⪼⪻⪼⪻⪼⪻⪼⪻⪼⪻⪼⪻⪼⪻⪼⪻⪼⪻⪼⪻⪼⪻⪼⪻⪼⪻⪼⪻⪼⪻⪼⪻⪼⪻⪼⪻\033[0m" | tee -a /etc/xraylog/log-vmess-$user.txt
+echo -e "${RED} ════════════════════════\033[0m" | tee -a /etc/xraylog/log-vmess-$user.txt
 echo -e "Link TLS       : ${vmesslink1}" | tee -a /etc/xraylog/log-vmess-$user.txt
-echo -e "${CYAN} ⪼⪻⪼⪻⪼⪻⪼⪻⪼⪻⪼⪻⪼⪻⪼⪻⪼⪻⪼⪻⪼⪻⪼⪻⪼⪻⪼⪻⪼⪻⪼⪻⪼⪻⪼⪻⪼⪻⪼⪻⪼⪻⪼⪻\033[0m" | tee -a /etc/xraylog/log-vmess-$user.txt
+echo -e "${BLUE} ════════════════════════\033[0m" | tee -a /etc/xraylog/log-vmess-$user.txt
 echo -e "Link none TLS  : ${vmesslink2}" | tee -a /etc/xraylog/log-vmess-$user.txt
-echo -e "${ORANGE} ⪼⪻⪼⪻⪼⪻⪼⪻⪼⪻⪼⪻⪼⪻⪼⪻⪼⪻⪼⪻⪼⪻⪼⪻⪼⪻⪼⪻⪼⪻⪼⪻⪼⪻⪼⪻⪼⪻⪼⪻⪼⪻⪼⪻\033[0m" | tee -a /etc/xraylog/log-vmess-$user.txt
+echo -e "${RED} ════════════════════════\033[0m" | tee -a /etc/xraylog/log-vmess-$user.txt
 echo -e "Link gRPC      : ${vmesslink3}" | tee -a /etc/xraylog/log-vmess-$user.txt
-echo -e "${CYAN} ⪼⪻⪼⪻⪼⪻⪼⪻⪼⪻⪼⪻⪼⪻⪼⪻⪼⪻⪼⪻⪼⪻⪼⪻⪼⪻⪼⪻⪼⪻⪼⪻⪼⪻⪼⪻⪼⪻⪼⪻⪼⪻⪼⪻\033[0m" | tee -a /etc/xraylog/log-vmess-$user.txt
+echo -e "${BLUE} ════════════════════════\033[0m" | tee -a /etc/xraylog/log-vmess-$user.txt
 echo -e "Expired On     : $exp" | tee -a /etc/xraylog/log-vmess-$user.txt
-echo -e "${RED} ⪼⪻⪼⪻⪼⪻⪼⪻⪼⪻⪼⪻⪼⪻⪼⪻⪼⪻⪼⪻⪼⪻⪼⪻⪼⪻⪼⪻⪼⪻⪼⪻⪼⪻⪼⪻⪼⪻⪼⪻⪼⪻⪼⪻\033[0m" | tee -a /etc/xraylog/log-vmess-$user.txt
+echo -e "${RED} ════════════════════════\033[0m" | tee -a /etc/xraylog/log-vmess-$user.txt
 echo ""
 
 read -n 1 -s -r -p "Press any key to back"
