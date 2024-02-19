@@ -77,9 +77,9 @@ vlesslink2="vless://${uuid}@${domain}:80?path=/vless&encryption=none&type=ws#${u
 vlesslink3="vless://${uuid}@${domain}:443?mode=gun&security=tls&encryption=none&type=grpc&serviceName=vless-grpc&sni=bug.com#${user}"
 systemctl restart xray
 clear
-echo -e "${ORANGE}╒࿐࿐࿐࿐࿐࿐࿐࿐࿐࿐࿐࿐࿐࿐࿐࿐࿐࿐࿐࿐࿐࿐࿐࿐࿐࿐࿐࿐࿐࿐࿐࿐࿐࿐࿐࿐࿐࿐࿐࿐࿐࿐࿐࿐╕\033[0m" | tee -a /etc/xraylog/log-vless-$user.txt
-echo -e " \E[0;36;44;1m             Vless Trial Account            \E[0m" | tee -a /etc/xraylog/log-vless-$user.txt
-echo -e "${CYAN}╘࿐࿐࿐࿐࿐࿐࿐࿐࿐࿐࿐࿐࿐࿐࿐࿐࿐࿐࿐࿐࿐࿐࿐࿐࿐࿐࿐࿐࿐࿐࿐࿐࿐࿐࿐࿐࿐࿐࿐࿐࿐࿐࿐࿐╛\033[0m" | tee -a /etc/xraylog/log-vless-$user.txt
+echo -e "${BLUE}╒══════════════════════════╕\033[0m" | tee -a /etc/xraylog/log-vless-$user.txt
+echo -e " \E[0;33;44;1m   Detail Vless Account   \E[0m" | tee -a /etc/xraylog/log-vless-$user.txt
+echo -e "${RED}╘══════════════════════════╛\033[0m" | tee -a /etc/xraylog/log-vless-$user.txt
 echo -e "Remarks        : ${user}" | tee -a /etc/xraylog/log-vless-$user.txt
 echo -e "Domain         : ${domain}" | tee -a /etc/xraylog/log-vless-$user.txt
 echo -e "ISP            : ${ISP}" | tee -a /etc/xraylog/log-vless-$user.txt
@@ -92,15 +92,15 @@ echo -e "Encryption     : none" | tee -a /etc/xraylog/log-vless-$user.txt
 echo -e "Network        : ws" | tee -a /etc/xraylog/log-vless-$user.txt
 echo -e "Path           : /vless" | tee -a /etc/xraylog/log-vless-$user.txt
 echo -e "Service Name   : vless-grpc" | tee -a /etc/xraylog/log-vless-$user.txt
-echo -e "${ORANGE} ⪼⪻⪼⪻⪼⪻⪼⪻⪼⪻⪼⪻⪼⪻⪼⪻⪼⪻⪼⪻⪼⪻⪼⪻⪼⪻⪼⪻⪼⪻⪼⪻⪼⪻⪼⪻⪼⪻⪼⪻⪼⪻⪼⪻\033[0m" | tee -a /etc/xraylog/log-vless-$user.txt
+echo -e "${BLUE} ════════════════════════\033[0m" | tee -a /etc/xraylog/log-vless-$user.txt
 echo -e "Link TLS       : ${vlesslink1}" | tee -a /etc/xraylog/log-vless-$user.txt
-echo -e "${CYAN} ⪼⪻⪼⪻⪼⪻⪼⪻⪼⪻⪼⪻⪼⪻⪼⪻⪼⪻⪼⪻⪼⪻⪼⪻⪼⪻⪼⪻⪼⪻⪼⪻⪼⪻⪼⪻⪼⪻⪼⪻⪼⪻⪼⪻\033[0m" | tee -a /etc/xraylog/log-vless-$user.txt
+echo -e "${RED} ════════════════════════\033[0m" | tee -a /etc/xraylog/log-vless-$user.txt
 echo -e "Link none TLS  : ${vlesslink2}" | tee -a /etc/xraylog/log-vless-$user.txt
-echo -e "${ORANGE} ⪼⪻⪼⪻⪼⪻⪼⪻⪼⪻⪼⪻⪼⪻⪼⪻⪼⪻⪼⪻⪼⪻⪼⪻⪼⪻⪼⪻⪼⪻⪼⪻⪼⪻⪼⪻⪼⪻⪼⪻⪼⪻⪼⪻\033[0m" | tee -a /etc/xraylog/log-vless-$user.txt
+echo -e "${BLUE} ════════════════════════\033[0m" | tee -a /etc/xraylog/log-vless-$user.txt
 echo -e "Link gRPC      : ${vlesslink3}" | tee -a /etc/xraylog/log-vless-$user.txt
-echo -e "${CYAN} ⪼⪻⪼⪻⪼⪻⪼⪻⪼⪻⪼⪻⪼⪻⪼⪻⪼⪻⪼⪻⪼⪻⪼⪻⪼⪻⪼⪻⪼⪻⪼⪻⪼⪻⪼⪻⪼⪻⪼⪻⪼⪻⪼⪻\033[0m" | tee -a /etc/xraylog/log-vless-$user.txt
+echo -e "${RED} ════════════════════════\033[0m" | tee -a /etc/xraylog/log-vless-$user.txt
 echo -e "Expired On     : $exp" | tee -a /etc/xraylog/log-vless-$user.txt
-echo -e "${RED} ⪼⪻⪼⪻⪼⪻⪼⪻⪼⪻⪼⪻⪼⪻⪼⪻⪼⪻⪼⪻⪼⪻⪼⪻⪼⪻⪼⪻⪼⪻⪼⪻⪼⪻⪼⪻⪼⪻⪼⪻⪼⪻⪼⪻\033[0m" | tee -a /etc/xraylog/log-vless-$user.txt
+echo -e "${BLUE} ════════════════════════\033[0m" | tee -a /etc/xraylog/log-vless-$user.txt
 echo ""
 read -n 1 -s -r -p "Press any key to back"
 m-vless
