@@ -37,22 +37,22 @@ domain=$(cat /etc/xray/domain)
 ISP=$(cat /usr/local/etc/xray/org)
 CITY=$(cat /usr/local/etc/xray/city)
 until [[ $user =~ ^[a-zA-Z0-9_]+$ && ${CLIENT_EXISTS} == '0' ]]; do
-echo -e "${ORANGE}╒࿐࿐࿐࿐࿐࿐࿐࿐࿐࿐࿐࿐࿐࿐࿐࿐࿐࿐࿐࿐࿐࿐࿐࿐࿐࿐࿐࿐࿐࿐࿐࿐࿐࿐࿐࿐࿐࿐࿐࿐࿐࿐࿐࿐╕\033[0m"
-echo -e " \E[0;36;44;1m            Create Vmess Account            \E[0m"
-echo -e "${CYAN}╘࿐࿐࿐࿐࿐࿐࿐࿐࿐࿐࿐࿐࿐࿐࿐࿐࿐࿐࿐࿐࿐࿐࿐࿐࿐࿐࿐࿐࿐࿐࿐࿐࿐࿐࿐࿐࿐࿐࿐࿐࿐࿐࿐࿐╛\033[0m"
+echo -e "${BLUE}╒════════════════════════════════════════════╕\033[0m"
+echo -e " \E[0;33;44;1m            Create Vmess Account            \E[0m"
+echo -e "${RED}╘════════════════════════════════════════════╛\033[0m"
 
 		read -rp "User: " -e user
 		CLIENT_EXISTS=$(grep -w $user /etc/xray/config.json | wc -l)
 
 		if [[ ${CLIENT_EXISTS} == '1' ]]; then
 clear
-echo -e "${ORANGE}╒࿐࿐࿐࿐࿐࿐࿐࿐࿐࿐࿐࿐࿐࿐࿐࿐࿐࿐࿐࿐࿐࿐࿐࿐࿐࿐࿐࿐࿐࿐࿐࿐࿐࿐࿐࿐࿐࿐࿐࿐࿐࿐࿐࿐╕\033[0m"
-echo -e " \E[0;36;44;1m            Create Account Failed           \E[0m"
-echo -e "${CYAN}╘࿐࿐࿐࿐࿐࿐࿐࿐࿐࿐࿐࿐࿐࿐࿐࿐࿐࿐࿐࿐࿐࿐࿐࿐࿐࿐࿐࿐࿐࿐࿐࿐࿐࿐࿐࿐࿐࿐࿐࿐࿐࿐࿐࿐╛\033[0m"
+echo -e "${BLUE}╒════════════════════════════════════════════╕\033[0m"
+echo -e " \E[0;33;44;1m            Create Account Failed           \E[0m"
+echo -e "${RED}╘════════════════════════════════════════════╛\033[0m"
 			echo ""
 			echo "A client with the specified name was already created, please choose another name."
 			echo ""
-			echo -e "${RED} ⪼⪻⪼⪻⪼⪻⪼⪻⪼⪻⪼⪻⪼⪻⪼⪻⪼⪻⪼⪻⪼⪻⪼⪻⪼⪻⪼⪻⪼⪻⪼⪻⪼⪻⪼⪻⪼⪻⪼⪻⪼⪻⪼⪻\033[0m"
+			echo -e "${BLUE} ⪼⪻⪼⪻⪼⪻⪼⪻⪼⪻⪼⪻⪼⪻⪼⪻⪼⪻⪼⪻⪼⪻⪼⪻⪼⪻⪼⪻⪼⪻⪼⪻⪼⪻⪼⪻⪼⪻⪼⪻⪼⪻⪼⪻\033[0m"
 			read -n 1 -s -r -p "Press any key to back on menu"
 m-vmess
 		fi
@@ -120,9 +120,9 @@ vmesslink3="vmess://$(echo $grpc | base64 -w 0)"
 systemctl restart xray > /dev/null 2>&1
 service cron restart > /dev/null 2>&1
 clear
-echo -e "${ORANGE}╒࿐࿐࿐࿐࿐࿐࿐࿐࿐࿐࿐࿐࿐࿐࿐࿐࿐࿐࿐࿐࿐࿐࿐࿐࿐࿐࿐࿐࿐࿐࿐࿐࿐࿐࿐࿐࿐࿐࿐࿐࿐࿐࿐࿐╕\033[0m" | tee -a /etc/xraylog/log-vmess-$user.txt
-echo -e " \E[0;36;44;1m            Detail Vmess Account            \E[0m" | tee -a /etc/xraylog/log-vmess-$user.txt
-echo -e "${CYAN}╘࿐࿐࿐࿐࿐࿐࿐࿐࿐࿐࿐࿐࿐࿐࿐࿐࿐࿐࿐࿐࿐࿐࿐࿐࿐࿐࿐࿐࿐࿐࿐࿐࿐࿐࿐࿐࿐࿐࿐࿐࿐࿐࿐࿐╛\033[0m" | tee -a /etc/xraylog/log-vmess-$user.txt
+echo -e "${BLUE}╒══════════════════════════╕\033[0m" | tee -a /etc/xraylog/log-vmess-$user.txt
+echo -e " \E[0;33;44;1m   Detail Vmess Account   \E[0m" | tee -a /etc/xraylog/log-vmess-$user.txt
+echo -e "${RED}╘══════════════════════════╛\033[0m" | tee -a /etc/xraylog/log-vmess-$user.txt
 echo -e "Remarks        : ${user}" | tee -a /etc/xraylog/log-vmess-$user.txt
 echo -e "Domain         : ${domain}" | tee -a /etc/xraylog/log-vmess-$user.txt
 echo -e "ISP            : ${ISP}" | tee -a /etc/xraylog/log-vmess-$user.txt
@@ -136,15 +136,15 @@ echo -e "Security       : auto" | tee -a /etc/xraylog/log-vmess-$user.txt
 echo -e "Network        : ws" | tee -a /etc/xraylog/log-vmess-$user.txt
 echo -e "Path           : /vmess" | tee -a /etc/xraylog/log-vmess-$user.txt
 echo -e "Service Name   : vmess-grpc" | tee -a /etc/xraylog/log-vmess-$user.txt
-echo -e "${RED} ⪼⪻⪼⪻⪼⪻⪼⪻⪼⪻⪼⪻⪼⪻⪼⪻⪼⪻⪼⪻⪼⪻⪼⪻⪼⪻⪼⪻⪼⪻⪼⪻⪼⪻⪼⪻⪼⪻⪼⪻⪼⪻⪼⪻\033[0m" | tee -a /etc/xraylog/log-vmess-$user.txt
+echo -e "${BLUE} ════════════════════════\033[0m" | tee -a /etc/xraylog/log-vmess-$user.txt
 echo -e "Link TLS       : ${vmesslink1}" | tee -a /etc/xraylog/log-vmess-$user.txt
-echo -e "${CYAN} ⪼⪻⪼⪻⪼⪻⪼⪻⪼⪻⪼⪻⪼⪻⪼⪻⪼⪻⪼⪻⪼⪻⪼⪻⪼⪻⪼⪻⪼⪻⪼⪻⪼⪻⪼⪻⪼⪻⪼⪻⪼⪻⪼⪻\033[0m" | tee -a /etc/xraylog/log-vmess-$user.txt
+echo -e "${RED} ════════════════════════\033[0m" | tee -a /etc/xraylog/log-vmess-$user.txt
 echo -e "Link none TLS  : ${vmesslink2}" | tee -a /etc/xraylog/log-vmess-$user.txt
-echo -e "${CYAN} ⪼⪻⪼⪻⪼⪻⪼⪻⪼⪻⪼⪻⪼⪻⪼⪻⪼⪻⪼⪻⪼⪻⪼⪻⪼⪻⪼⪻⪼⪻⪼⪻⪼⪻⪼⪻⪼⪻⪼⪻⪼⪻⪼⪻\033[0m" | tee -a /etc/xraylog/log-vmess-$user.txt
+echo -e "${BLUE} ════════════════════════\033[0m" | tee -a /etc/xraylog/log-vmess-$user.txt
 echo -e "Link gRPC      : ${vmesslink3}" | tee -a /etc/xraylog/log-vmess-$user.txt
-echo -e "${ORANGE} ⪼⪻⪼⪻⪼⪻⪼⪻⪼⪻⪼⪻⪼⪻⪼⪻⪼⪻⪼⪻⪼⪻⪼⪻⪼⪻⪼⪻⪼⪻⪼⪻⪼⪻⪼⪻⪼⪻⪼⪻⪼⪻⪼⪻\033[0m" | tee -a /etc/xraylog/log-vmess-$user.txt
+echo -e "${RED} ════════════════════════\033[0m" | tee -a /etc/xraylog/log-vmess-$user.txt
 echo -e "Expired On     : $exp" | tee -a /etc/xraylog/log-vmess-$user.txt
-echo -e "${CYAN} ⪼⪻⪼⪻⪼⪻⪼⪻⪼⪻⪼⪻⪼⪻⪼⪻⪼⪻⪼⪻⪼⪻⪼⪻⪼⪻⪼⪻⪼⪻⪼⪻⪼⪻⪼⪻⪼⪻⪼⪻⪼⪻⪼⪻\033[0m" | tee -a /etc/xraylog/log-vmess-$user.txt
+echo -e "${BLUE} ════════════════════════\033[0m" | tee -a /etc/xraylog/log-vmess-$user.txt
 echo "" | tee -a /etc/xraylog/log-vmess-$user.txt
 echo "Thanks for using GmeServices"
 read -n 1 -s -r -p "Press any key to back"
