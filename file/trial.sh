@@ -43,6 +43,7 @@ echo -e "SSH WS     : 80, 8880, 8080, 2082, 2095"
 echo -e "SSH SSL WS : 443, 8443, 2083, 2053, 2096"
 echo -e "SSL/TLS    : 222, 777"
 echo -e "UDPGW      : 7100-7900"
+echo -e "UDP        : 1-65535"
 echo -e "${RED} ════════════════════════\033[0m"
 
 else
