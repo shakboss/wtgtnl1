@@ -36,18 +36,18 @@ domain=$(cat /etc/xray/domain)
 ISP=$(cat /usr/local/etc/xray/org)
 CITY=$(cat /usr/local/etc/xray/city)
 until [[ $user =~ ^[a-zA-Z0-9_]+$ && ${CLIENT_EXISTS} == '0' ]]; do
-echo -e "${ORANGE}╒࿐࿐࿐࿐࿐࿐࿐࿐࿐࿐࿐࿐࿐࿐࿐࿐࿐࿐࿐࿐࿐࿐࿐࿐࿐࿐࿐࿐࿐࿐࿐࿐࿐࿐࿐࿐࿐࿐࿐࿐࿐࿐࿐࿐╕\033[0m"
-echo -e " \E[0;36;44;1m         Create Shadowsocks Account         \E[0m"
-echo -e "${CYAN}╘࿐࿐࿐࿐࿐࿐࿐࿐࿐࿐࿐࿐࿐࿐࿐࿐࿐࿐࿐࿐࿐࿐࿐࿐࿐࿐࿐࿐࿐࿐࿐࿐࿐࿐࿐࿐࿐࿐࿐࿐࿐࿐࿐࿐╛\033[0m"
+echo -e "${BLUE}╒════════════════════════════════════════════╕\033[0m"
+echo -e " \E[0;33;44;1m         Create Shadowsocks Account         \E[0m"
+echo -e "${RED}╘════════════════════════════════════════════╛\033[0m"
 
 		read -rp "User: " -e user
 		CLIENT_EXISTS=$(grep -w $user /etc/xray/config.json | wc -l)
 
 		if [[ ${CLIENT_EXISTS} == '1' ]]; then
 clear
-echo -e "${ORANGE}╒࿐࿐࿐࿐࿐࿐࿐࿐࿐࿐࿐࿐࿐࿐࿐࿐࿐࿐࿐࿐࿐࿐࿐࿐࿐࿐࿐࿐࿐࿐࿐࿐࿐࿐࿐࿐࿐࿐࿐࿐࿐࿐࿐࿐╕\033[0m"
-echo -e " \E[0;36;44;1m            Create Account Failed           \E[0m"
-echo -e "${CYAN}╘࿐࿐࿐࿐࿐࿐࿐࿐࿐࿐࿐࿐࿐࿐࿐࿐࿐࿐࿐࿐࿐࿐࿐࿐࿐࿐࿐࿐࿐࿐࿐࿐࿐࿐࿐࿐࿐࿐࿐࿐࿐࿐࿐࿐╛\033[0m"
+echo -e "${RED}╒════════════════════════════════════════════╕\033[0m"
+echo -e " \E[0;33;44;1m            Create Account Failed           \E[0m"
+echo -e "${BLUE}╘════════════════════════════════════════════╛\033[0m"
 
 			echo ""
 			echo "A client with the specified name was already created, please choose another name."
@@ -294,9 +294,9 @@ END
 systemctl restart xray > /dev/null 2>&1
 service cron restart > /dev/null 2>&1
 clear
-echo -e "${ORANGE}╒࿐࿐࿐࿐࿐࿐࿐࿐࿐࿐࿐࿐࿐࿐࿐࿐࿐࿐࿐࿐࿐࿐࿐࿐࿐࿐࿐࿐࿐࿐࿐࿐࿐࿐࿐࿐࿐࿐࿐࿐࿐࿐࿐࿐╕\033[0m" | tee -a /etc/xraylog/log-ss-$user.txt
-echo -e " \E[0;36;44;1m         Detail Shadowsocks Account         \E[0m" | tee -a /etc/xraylog/log-ss-$user.txt
-echo -e "${CYAN}╘࿐࿐࿐࿐࿐࿐࿐࿐࿐࿐࿐࿐࿐࿐࿐࿐࿐࿐࿐࿐࿐࿐࿐࿐࿐࿐࿐࿐࿐࿐࿐࿐࿐࿐࿐࿐࿐࿐࿐࿐࿐࿐࿐࿐╛\033[0m" | tee -a /etc/xraylog/log-ss-$user.txt
+echo -e "${BLUE}╒══════════════════════════╕\033[0m" | tee -a /etc/xraylog/log-ss-$user.txt
+echo -e " \E[0;33;44;1mDetail Shadowsocks Account\E[0m" | tee -a /etc/xraylog/log-ss-$user.txt
+echo -e "${RED}╘══════════════════════════╛\033[0m" | tee -a /etc/xraylog/log-ss-$user.txt
 echo -e "Remarks        : ${user}" | tee -a /etc/xraylog/log-ss-$user.txt
 echo -e "Domain         : ${domain}" | tee -a /etc/xraylog/log-ss-$user.txt
 echo -e "ISP            : ${ISP}" | tee -a /etc/xraylog/log-ss-$user.txt
@@ -309,15 +309,15 @@ echo -e "Ciphers        : ${cipher}" | tee -a /etc/xraylog/log-ss-$user.txt
 echo -e "Network        : ws/grpc" | tee -a /etc/xraylog/log-ss-$user.txt
 echo -e "Path           : /ss-ws" | tee -a /etc/xraylog/log-ss-$user.txt
 echo -e "ServiceName    : ss-grpc" | tee -a /etc/xraylog/log-ss-$user.txt
-echo -e "${RED} ⪼⪻⪼⪻⪼⪻⪼⪻⪼⪻⪼⪻⪼⪻⪼⪻⪼⪻⪼⪻⪼⪻⪼⪻⪼⪻⪼⪻⪼⪻⪼⪻⪼⪻⪼⪻⪼⪻⪼⪻⪼⪻⪼⪻\033[0m" | tee -a /etc/xraylog/log-ss-$user.txt
+echo -e "${BLUE} ════════════════════════\033[0m" | tee -a /etc/xraylog/log-ss-$user.txt
 echo -e "Link TLS       : ${shadowsockslink}" | tee -a /etc/xraylog/log-ss-$user.txt
-echo -e "${CYAN} ⪼⪻⪼⪻⪼⪻⪼⪻⪼⪻⪼⪻⪼⪻⪼⪻⪼⪻⪼⪻⪼⪻⪼⪻⪼⪻⪼⪻⪼⪻⪼⪻⪼⪻⪼⪻⪼⪻⪼⪻⪼⪻⪼⪻\033[0m" | tee -a /etc/xraylog/log-ss-$user.txt
+echo -e "${RED} ════════════════════════\033[0m" | tee -a /etc/xraylog/log-ss-$user.txt
 echo -e "Link none TLS  : ${shadowsockslink1}" | tee -a /etc/xraylog/log-ss-$user.txt
-echo -e "${RED} ⪼⪻⪼⪻⪼⪻⪼⪻⪼⪻⪼⪻⪼⪻⪼⪻⪼⪻⪼⪻⪼⪻⪼⪻⪼⪻⪼⪻⪼⪻⪼⪻⪼⪻⪼⪻⪼⪻⪼⪻⪼⪻⪼⪻\033[0m" | tee -a /etc/xraylog/log-ss-$user.txt
+echo -e "${BLUE} ════════════════════════\033[0m" | tee -a /etc/xraylog/log-ss-$user.txt
 echo -e "Link gRPC      : ${shadowsockslink2}" | tee -a /etc/xraylog/log-ss-$user.txt
-echo -e "${CYAN} ⪼⪻⪼⪻⪼⪻⪼⪻⪼⪻⪼⪻⪼⪻⪼⪻⪼⪻⪼⪻⪼⪻⪼⪻⪼⪻⪼⪻⪼⪻⪼⪻⪼⪻⪼⪻⪼⪻⪼⪻⪼⪻⪼⪻\033[0m" | tee -a /etc/xraylog/log-ss-$user.txt
+echo -e "${RED} ════════════════════════\033[0m" | tee -a /etc/xraylog/log-ss-$user.txt
 echo -e "Expired On     : $exp" | tee -a /etc/xraylog/log-ss-$user.txt
-echo -e "${RED} ⪼⪻⪼⪻⪼⪻⪼⪻⪼⪻⪼⪻⪼⪻⪼⪻⪼⪻⪼⪻⪼⪻⪼⪻⪼⪻⪼⪻⪼⪻⪼⪻⪼⪻⪼⪻⪼⪻⪼⪻⪼⪻⪼⪻\033[0m" | tee -a /etc/xraylog/log-ss-$user.txt
+echo -e "${BLUE} ════════════════════════\033[0m" | tee -a /etc/xraylog/log-ss-$user.txt
 echo "" | tee -a /etc/xraylog/log-ss-$user.txt
 echo "Thanks for using GMEServices"
 read -n 1 -s -r -p "Press any key to back"
