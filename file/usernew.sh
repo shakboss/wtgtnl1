@@ -83,6 +83,7 @@ echo -e "SSH WS      : 80, 8880, 8080, 2082, 2095" | tee -a /etc/xraylog/log-ssh
 echo -e "SSH SSL WS  : 443, 8443, 2083, 2053, 2096" | tee -a /etc/xraylog/log-ssh-$Login.txt
 echo -e "SSL/TLS     : 222, 777" | tee -a /etc/xraylog/log-ssh-$Login.txt
 echo -e "UDPGW       : 7100-7900" | tee -a /etc/xraylog/log-ssh-$Login.txt
+echo -e "UDP         : 1-65535" | tee -a /etc/xraylog/log-ssh-$Login.txt
 echo -e "${RED} ════════════════════════\033[0m" | tee -a /etc/xraylog/log-ssh-$Login.txt
 echo -e "Expired On     : $exp" | tee -a /etc/xraylog/log-ssh-$Login.txt
 echo -e "${BLUE} ════════════════════════\033[0m" | tee -a /etc/xraylog/log-ssh-$Login.txt
@@ -102,6 +103,7 @@ echo -e "SSH WS      : 80, 8880, 8080, 2082, 2095" | tee -a /etc/xraylog/log-ssh
 echo -e "SSH SSL WS  : 443, 8443, 2083, 2053, 2096" | tee -a /etc/xraylog/log-ssh-$Login.txt
 echo -e "SSL/TLS     : 222, 777" | tee -a /etc/xraylog/log-ssh-$Login.txt
 echo -e "UDPGW       : 7100-7900" | tee -a /etc/xraylog/log-ssh-$Login.txt
+echo -e "UDP         : 1-65535" | tee -a /etc/xraylog/log-ssh-$Login.txt
 echo -e "${BLUE} ════════════════════════\033[0m" | tee -a /etc/xraylog/log-ssh-$Login.txt
 echo -e "Expired On     : $exp" | tee -a /etc/xraylog/log-ssh-$Login.txt
 echo -e "${RED} ════════════════════════\033[0m" | tee -a /etc/xraylog/log-ssh-$Login.txt
