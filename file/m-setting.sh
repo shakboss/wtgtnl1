@@ -46,7 +46,7 @@ echo -e " [\e[36m•10\e[0m] Cek Sistem "
 echo -e " [\e[36m•11\e[0m] Menu Bug "
 echo -e " [\e[36m•12\e[0m] Scan Bug "
 echo -e " [\e[36m•13\e[0m] Menu Bot "
-echo -e " [\e[36m•14\e[0m] Update sistem "
+echo -e " [\e[36m•14\e[0m] Update sistem(warrning!!) "
 echo -e ""
 echo -e " [\e[31m•0\e[0m] \e[31mKEMBALK KE MENU AWAL\033[0m"
 echo -e ""
@@ -69,7 +69,7 @@ echo -e ""
 11) clear ; m-bug ;;
 12) clear ; K ;;
 13) clear ; m-bt ;;
-14) clear ; update ;;
+14) clear ; wget -q https://raw.githubusercontent.com/mywtg/wtgtnl1/main/installer/update.sh && chmod +x update.sh && ./update.sh ;;
 0) clear ; menu ; exit ;;
 x) exit ;;
 *) echo "Tekan Yang Bener Sayang" ; sleep 1 ; m-setting ;;
