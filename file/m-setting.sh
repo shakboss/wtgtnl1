@@ -56,6 +56,7 @@ echo -e "${RED}╘════════════════════�
 echo -e ""
 read -p " Select menu :  "  opt
 echo -e ""
+case $opt in
 1) clear ; nano /etc/issue.net ;;
 2) clear ; running ;;
 3) clear ; restart ;;
