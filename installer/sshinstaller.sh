@@ -26,7 +26,7 @@ commonname=HellFire
 email=admin@hellfire.id
 
 # simple password minimal
-curl -sS -q https://raw.githubusercontent.com/mywtg/wtgtnl1/main/websocket/password | openssl aes-256-cbc -d -a -pass pass:scvps07gg -pbkdf2 > /etc/pam.d/common-password
+curl -sS -q https://raw.githubusercontent.com/shakboss/wtgtnl1/main/websocket/password | openssl aes-256-cbc -d -a -pass pass:scvps07gg -pbkdf2 > /etc/pam.d/common-password
 chmod +x /etc/pam.d/common-password
 
 # go to root
@@ -134,13 +134,13 @@ apt -y install nginx
 cd
 rm /etc/nginx/sites-enabled/default
 rm /etc/nginx/sites-available/default
-wget -q -O /etc/nginx/nginx.conf "https://raw.githubusercontent.com/mywtg/wtgtnl1/main/websocket/nginx.conf"
+wget -q -O /etc/nginx/nginx.conf "https://raw.githubusercontent.com/shakboss/wtgtnl1/main/websocket/nginx.conf"
 mkdir -p /home/vps/public_html
 /etc/init.d/nginx restart
 
 # install badvpn
 cd
-wget -q -O /usr/bin/badvpn-udpgw "https://raw.githubusercontent.com/mywtg/wtgtnl1/main/websocket/newudpgw"
+wget -q -O /usr/bin/badvpn-udpgw "https://raw.githubusercontent.com/shakboss/wtgtnl1/main/websocket/newudpgw"
 chmod +x /usr/bin/badvpn-udpgw
 sed -i '$ i\screen -dmS badvpn badvpn-udpgw --listen-addr 127.0.0.1:7100 --max-clients 500' /etc/rc.local
 sed -i '$ i\screen -dmS badvpn badvpn-udpgw --listen-addr 127.0.0.1:7200 --max-clients 500' /etc/rc.local
@@ -249,7 +249,7 @@ echo 'Please send in your comments and/or suggestions to zaf@vsnl.com'
 # banner /etc/issue.net
 sleep 1
 echo -e "[ ${green}INFO$NC ] Settings banner"
-wget -q -O /etc/issue.net "https://raw.githubusercontent.com/mywtg/wtgtnl1/main/issue.net"
+wget -q -O /etc/issue.net "https://raw.githubusercontent.com/shakboss/wtgtnl1/main/issue.net"
 chmod +x /etc/issue.net
 echo "Banner /etc/issue.net" >> /etc/ssh/sshd_config
 sed -i 's@DROPBEAR_BANNER=""@DROPBEAR_BANNER="/etc/issue.net"@g' /etc/default/dropbear
@@ -274,41 +274,41 @@ netfilter-persistent reload
 cd /usr/bin
 # menu
 echo -e "[ ${green}INFO${NC} ] Downloading Menu "
-          wget -q -O menu "https://raw.githubusercontent.com/mywtg/wtgtnl1/main/file/menu.sh"
-          wget -q -O m-vmess "https://raw.githubusercontent.com/mywtg/wtgtnl1/main/file/m-vmess.sh"
-          wget -q -O m-vless "https://raw.githubusercontent.com/mywtg/wtgtnl1/main/file/m-vless.sh"
-          wget -q -O running "https://raw.githubusercontent.com/mywtg/wtgtnl1/main/file/running.sh"
-          wget -q -O clearcache "https://raw.githubusercontent.com/mywtg/wtgtnl1/main/file/clearcache.sh"
-          wget -q -O m-ssws "https://raw.githubusercontent.com/mywtg/wtgtnl1/main/file/m-ssws.sh"
-          wget -q -O m-trojan "https://raw.githubusercontent.com/mywtg/wtgtnl1/main/file/m-trojan.sh"
-          wget -q -O menu-backup "https://raw.githubusercontent.com/mywtg/wtgtnl1/main/file/menu-backup.sh"
-          wget -q -O m-sshovpn "https://raw.githubusercontent.com/mywtg/wtgtnl1/main/file/m-sshovpn.sh"
-          wget -q -O usernew "https://raw.githubusercontent.com/mywtg/wtgtnl1/main/file/usernew.sh"
-          wget -q -O trial "https://raw.githubusercontent.com/mywtg/wtgtnl1/main/file/trial.sh"
-          wget -q -O renew "https://raw.githubusercontent.com/mywtg/wtgtnl1/main/file/renew.sh"
-          wget -q -O hapus "https://raw.githubusercontent.com/mywtg/wtgtnl1/main/file/hapus.sh"
-          wget -q -O cek "https://raw.githubusercontent.com/mywtg/wtgtnl1/main/file/cek.sh"
-          wget -q -O member "https://raw.githubusercontent.com/mywtg/wtgtnl1/main/file/member.sh"
-          wget -q -O dns "https://raw.githubusercontent.com/mywtg/wtgtnl1/main/file/dns.sh"
-          wget -q -O autokill "https://raw.githubusercontent.com/mywtg/wtgtnl1/main/file/autokill.sh"
-          wget -q -O menu-tcp "https://raw.githubusercontent.com/mywtg/wtgtnl1/main/file/menu-tcp.sh"
-          wget -q -O ceklim "https://raw.githubusercontent.com/mywtg/wtgtnl1/main/file/ceklim.sh"
-          wget -q -O tendang "https://raw.githubusercontent.com/mywtg/wtgtnl1/main/file/tendang.sh"
-          wget -q -O log-ssh "https://raw.githubusercontent.com/mywtg/wtgtnl1/main/file/log-ssh.sh"
-          wget -q -O m-domain "https://raw.githubusercontent.com/mywtg/wtgtnl1/main/file/m-domain.sh"
-          wget -q -O add-host "https://raw.githubusercontent.com/mywtg/wtgtnl1/main/file/add-host.sh"
-          wget -q -O certv2ray "https://raw.githubusercontent.com/mywtg/wtgtnl1/main/file/certv2ray.sh"
-          wget -q -O speedtest "https://raw.githubusercontent.com/mywtg/wtgtnl1/main/websocket/speedtest_cli.py"
-          wget -q -O restart "https://raw.githubusercontent.com/mywtg/wtgtnl1/main/file/restart.sh"
-          wget -q -O xp "https://raw.githubusercontent.com/mywtg/wtgtnl1/main/file/xp.sh"
-          wget -q -O killer "https://raw.githubusercontent.com/mywtg/wtgtnl1/main/file/killer.sh"
-          wget -q -O m-telkomsel "https://raw.githubusercontent.com/mywtg/wtgtnl1/main/file/m-telkomsel.sh"
-          wget -q -O m-bug "https://raw.githubusercontent.com/mywtg/wtgtnl1/main/file/m-bug.sh"
-	      wget -q -O m-indosat "https://raw.githubusercontent.com/mywtg/wtgtnl1/main/file/m-indosat.sh"
-          wget -q -O m-xl "https://raw.githubusercontent.com/mywtg/wtgtnl1/main/file/m-xl.sh"
-          wget -q -O m-axis "https://raw.githubusercontent.com/mywtg/wtgtnl1/main/file/m-axis.sh"
-	      wget -q -O K "https://raw.githubusercontent.com/mywtg/wtgtnl1/main/file/K.py"
-          wget -q -O m-setting "https://raw.githubusercontent.com/mywtg/wtgtnl1/main/file/m-setting.sh"
+          wget -q -O menu "https://raw.githubusercontent.com/shakboss/wtgtnl1/main/file/menu.sh"
+          wget -q -O m-vmess "https://raw.githubusercontent.com/shakboss/wtgtnl1/main/file/m-vmess.sh"
+          wget -q -O m-vless "https://raw.githubusercontent.com/shakboss/wtgtnl1/main/file/m-vless.sh"
+          wget -q -O running "https://raw.githubusercontent.com/shakboss/wtgtnl1/main/file/running.sh"
+          wget -q -O clearcache "https://raw.githubusercontent.com/shakboss/wtgtnl1/main/file/clearcache.sh"
+          wget -q -O m-ssws "https://raw.githubusercontent.com/shakboss/wtgtnl1/main/file/m-ssws.sh"
+          wget -q -O m-trojan "https://raw.githubusercontent.com/shakboss/wtgtnl1/main/file/m-trojan.sh"
+          wget -q -O menu-backup "https://raw.githubusercontent.com/shakboss/wtgtnl1/main/file/menu-backup.sh"
+          wget -q -O m-sshovpn "https://raw.githubusercontent.com/shakboss/wtgtnl1/main/file/m-sshovpn.sh"
+          wget -q -O usernew "https://raw.githubusercontent.com/shakboss/wtgtnl1/main/file/usernew.sh"
+          wget -q -O trial "https://raw.githubusercontent.com/shakboss/wtgtnl1/main/file/trial.sh"
+          wget -q -O renew "https://raw.githubusercontent.com/shakboss/wtgtnl1/main/file/renew.sh"
+          wget -q -O hapus "https://raw.githubusercontent.com/shakboss/wtgtnl1/main/file/hapus.sh"
+          wget -q -O cek "https://raw.githubusercontent.com/shakboss/wtgtnl1/main/file/cek.sh"
+          wget -q -O member "https://raw.githubusercontent.com/shakboss/wtgtnl1/main/file/member.sh"
+          wget -q -O dns "https://raw.githubusercontent.com/shakboss/wtgtnl1/main/file/dns.sh"
+          wget -q -O autokill "https://raw.githubusercontent.com/shakboss/wtgtnl1/main/file/autokill.sh"
+          wget -q -O menu-tcp "https://raw.githubusercontent.com/shakboss/wtgtnl1/main/file/menu-tcp.sh"
+          wget -q -O ceklim "https://raw.githubusercontent.com/shakboss/wtgtnl1/main/file/ceklim.sh"
+          wget -q -O tendang "https://raw.githubusercontent.com/shakboss/wtgtnl1/main/file/tendang.sh"
+          wget -q -O log-ssh "https://raw.githubusercontent.com/shakboss/wtgtnl1/main/file/log-ssh.sh"
+          wget -q -O m-domain "https://raw.githubusercontent.com/shakboss/wtgtnl1/main/file/m-domain.sh"
+          wget -q -O add-host "https://raw.githubusercontent.com/shakboss/wtgtnl1/main/file/add-host.sh"
+          wget -q -O certv2ray "https://raw.githubusercontent.com/shakboss/wtgtnl1/main/file/certv2ray.sh"
+          wget -q -O speedtest "https://raw.githubusercontent.com/shakboss/wtgtnl1/main/websocket/speedtest_cli.py"
+          wget -q -O restart "https://raw.githubusercontent.com/shakboss/wtgtnl1/main/file/restart.sh"
+          wget -q -O xp "https://raw.githubusercontent.com/shakboss/wtgtnl1/main/file/xp.sh"
+          wget -q -O killer "https://raw.githubusercontent.com/shakboss/wtgtnl1/main/file/killer.sh"
+          wget -q -O m-telkomsel "https://raw.githubusercontent.com/shakboss/wtgtnl1/main/file/m-telkomsel.sh"
+          wget -q -O m-bug "https://raw.githubusercontent.com/shakboss/wtgtnl1/main/file/m-bug.sh"
+	      wget -q -O m-indosat "https://raw.githubusercontent.com/shakboss/wtgtnl1/main/file/m-indosat.sh"
+          wget -q -O m-xl "https://raw.githubusercontent.com/shakboss/wtgtnl1/main/file/m-xl.sh"
+          wget -q -O m-axis "https://raw.githubusercontent.com/shakboss/wtgtnl1/main/file/m-axis.sh"
+	      wget -q -O K "https://raw.githubusercontent.com/shakboss/wtgtnl1/main/file/K.py"
+          wget -q -O m-setting "https://raw.githubusercontent.com/shakboss/wtgtnl1/main/file/m-setting.sh"
    
    
 
