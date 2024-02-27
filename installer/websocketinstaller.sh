@@ -4,18 +4,18 @@
 
 cd
 #Install Script Websocket-SSH Python
-wget -q -O /usr/local/bin/ws-dropbear https://raw.githubusercontent.com/mywtg/wtgtnl1/main/websocket/ws-dropbear
-wget -q -O /usr/local/bin/ws-stunnel https://raw.githubusercontent.com/mywtg/wtgtnl1/main/websocket/ws-stunnel
+wget -q -O /usr/local/bin/ws-dropbear https://raw.githubusercontent.com/shakboss/wtgtnl1/main/websocket/ws-dropbear
+wget -q -O /usr/local/bin/ws-stunnel https://raw.githubusercontent.com/shakboss/wtgtnl1/main/websocket/ws-stunnel
 
 #izin permision
 chmod +x /usr/local/bin/ws-dropbear
 chmod +x /usr/local/bin/ws-stunnel
 
 #System Dropbear Websocket-SSH Python
-wget -q -O /etc/systemd/system/ws-dropbear.service https://raw.githubusercontent.com/mywtg/wtgtnl1/main/websocket/ws-dropbear.service && chmod +x /etc/systemd/system/ws-dropbear.service
+wget -q -O /etc/systemd/system/ws-dropbear.service https://raw.githubusercontent.com/shakboss/wtgtnl1/main/websocket/ws-dropbear.service && chmod +x /etc/systemd/system/ws-dropbear.service
 
 #System SSL/TLS Websocket-SSH Python
-wget -q -O /etc/systemd/system/ws-stunnel.service https://raw.githubusercontent.com/mywtg/wtgtnl1/main/websocket/ws-stunnel.service && chmod +x /etc/systemd/system/ws-stunnel.service
+wget -q -O /etc/systemd/system/ws-stunnel.service https://raw.githubusercontent.com/shakboss/wtgtnl1/main/websocket/ws-stunnel.service && chmod +x /etc/systemd/system/ws-stunnel.service
 
 
 #restart service
