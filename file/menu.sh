@@ -1,9 +1,9 @@
 #!/bin/bash
 MYIP=$(curl -sS ipv4.icanhazip.com)
-Name=$(curl -sS https://raw.githubusercontent.com/Erpinkun/IP-Register/main/ip | grep $MYIP | awk '{print $2}')
+Name=$(curl -sS https://raw.githubusercontent.com/shakboss/supreme/aio/permission/ip | grep $MYIP | awk '{print $2}')
 echo "Checking VPS"
 #########################
-IZIN=$(curl -sS https://raw.githubusercontent.com/Erpinkun/IP-Register/main/ip | awk '{print $4}' | grep $MYIP)
+IZIN=$(curl -sS https://raw.githubusercontent.com/shakboss/supreme/aio/permission/ip | awk '{print $4}' | grep $MYIP)
 if [ $MYIP = $MYIP ]; then
 echo -e "\e[32mWelcome To GME Area\e[0m"
 else
@@ -11,16 +11,16 @@ echo -e "\e[31mPermission Denied!\e[0m";
 exit 0
 fi
 #EXPIRED
-expired=$(curl -sS https://raw.githubusercontent.com/Erpinkun/IP-Register/main/ip | grep $MYIP | awk '{print $3}')
+expired=$(curl -sS https://raw.githubusercontent.com/shakboss/supreme/aio/permission/ip | grep $MYIP | awk '{print $3}')
 echo $expired > /root/expired.txt
 today=$(date -d +1day +%Y-%m-%d)
 while read expired
 do
-        exp=$(echo $expired | curl -sS https://raw.githubusercontent.com/Erpinkun/IP-Register/main/ip | grep $MYIP | awk '{print $3}')
+        exp=$(echo $expired | curl -sS https://raw.githubusercontent.com/shakboss/supreme/aio/permission/ip | grep $MYIP | awk '{print $3}')
         if [[ $exp < $today ]]; then
                 Exp2="\033[1;31mExpired\033[0m"
         else
-        Exp2=$(curl -sS https://raw.githubusercontent.com/Erpinkun/IP-Register/main/ip | grep $MYIP | awk '{print $3}')
+        Exp2=$(curl -sS https://raw.githubusercontent.com/shakboss/supreme/aio/permission/ip | grep $MYIP | awk '{print $3}')
         fi
 done < /root/expired.txt
 rm /root/expired.txt
