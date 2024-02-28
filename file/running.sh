@@ -189,8 +189,8 @@ totalram=$(($total_ram/1024))
 # KERNEL TERBARU
 kernelku=$(uname -r)
 #tipeos2=$(uname -m)
-Name=$(curl -sS https://raw.githubusercontent.com/Erpinkun/IP-Register/main/ip | grep $MYIP | awk '{print $2}')
-Exp=$(curl -sS https://raw.githubusercontent.com/Erpinkun/IP-Register/main/ip | grep $MYIP | awk '{print $3}')
+Name=$(curl -sS https://raw.githubusercontent.com/shakboss/supreme/aio/permission/ip | grep $MYIP | awk '{print $2}')
+Exp=$(curl -sS https://raw.githubusercontent.com/shakboss/supreme/aio/permission/ip | grep $MYIP | awk '{print $3}')
 # GETTING DOMAIN NAME
 Domen="$(cat /etc/xray/domain)"
 ISP=$(cat /usr/local/etc/xray/org)
