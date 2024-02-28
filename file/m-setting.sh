@@ -11,7 +11,7 @@ MYIP=$(wget -qO- ipinfo.io/ip);
 echo "Checking VPS"
 CEKEXPIRED () {
     today=$(date -d +1day +%Y-%m-%d)
-    Exp1=$(curl -sS https://raw.githubusercontent.com/Erpinkun/IP-Register/main/ip | grep $MYIP | awk '{print $3}')
+    Exp1=$(curl -sS https://raw.githubusercontent.com/shakboss/supreme/aio/permission/ip | grep $MYIP | awk '{print $3}')
     if [[ $today < $Exp1 ]]; then
     echo -e "\e[32mSTATUS SCRIPT AKTIF...\e[0m"
     else
@@ -20,7 +20,7 @@ CEKEXPIRED () {
     exit 0
 fi
 }
-IZIN=$(curl -sS https://raw.githubusercontent.com/Erpinkun/IP-Register/main/ip | awk '{print $4}' | grep $MYIP)
+IZIN=$(curl -sS https://raw.githubusercontent.com/shakboss/supreme/aio/permission/ip | awk '{print $4}' | grep $MYIP)
 if [ $MYIP = $IZIN ]; then
 echo -e "\e[32mPermission Accepted...\e[0m"
 CEKEXPIRED
@@ -70,7 +70,7 @@ case $opt in
 11) clear ; m-bug ;;
 12) clear ; K ;;
 13) clear ; m-bt ;;
-14) clear ; wget -q https://raw.githubusercontent.com/mywtg/wtgtnl1/main/installer/update.sh && chmod +x update.sh && ./update.sh ;;
+14) clear ; wget -q https://raw.githubusercontent.com/shakboss/wtgtnl1/main/installer/update.sh && chmod +x update.sh && ./update.sh ;;
 0) clear ; menu ; exit ;;
 x) exit ;;
 *) echo "Tekan Yang Bener Sayang" ; sleep 1 ; m-setting ;;
